@@ -1,0 +1,371 @@
+---
+title: "Mi próximo artículo científico en R"
+subtitle: "Reproducibilidad, interactividad y mejores flujos de trabajo"  
+author: 
+  - "Dra. Florencia D'Andrea"
+date: '2/12/2020'
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+library(xaringanExtra)
+library(tidyverse)
+library(nomnoml)
+xaringanExtra::use_logo(
+  image_url = "https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/xaringan.png"
+)
+xaringanExtra::use_panelset()
+xaringanExtra::use_broadcast()
+xaringanExtra::use_share_again()
+xaringanExtra::use_tachyons()
+xaringanExtra::use_fit_screen()
+xaringanExtra::use_tile_view() # O
+style_duo_accent(
+  primary_color = "#01CC99",
+  secondary_color = "#C3EBE2",
+  inverse_header_color = "#2E414D", 
+  inverse_text_color = "#2E414D",
+  code_inline_color = "#179c55",
+  link_color= "#245239",
+  text_font_size = "25px",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+class: inverse, center, middle
+
+# Seminario del Instituto de Recursos Biológicos del INTA
+
+### ¡Los estabamos esperando!
+
+
+---
+
+### El tema de mi postdoc es
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+Desarrollo de herramientas informáticas para evaluar el riesgo de las aplicaciones de plaguicidas para los ecosistemas acuáticos
+]
+
+
+
+---
+
+> Mi trabajo implica usar **modelos** que simulan el destino ambiental de los **plaguicidas** luego de su aplicación. 
+
+
+
+> Los resultados de estos modelos se exigen en otros países como parte del proceso de **regulación** de plaguicidas.
+
+---
+
+> Mi objetivo es estimar concentraciones que pueden alcanzar los mismos en **cuerpos de agua superficiales** de la **región pampeana**
+
+---
+
+## Mi próxima publicación se llama 
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+
+Statistically-based soil-climate exposure scenarios for aquatic pesticide fate modelling and exposure assessment in the Pampa Region of Argentina.
+
+]
+
+--
+
+.bg-washed-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt5[
+
+Escenarios de exposición suelo-clima basados en estadísticas para la modelización del destino de los plaguicidas acuáticos y la evaluación de la exposición en la región pampeana de Argentina.
+
+]
+
+---
+
+En este trabajo realizó 118500 simulaciones. 
+
+Simulo una aplicación de plaguicida anual: 
+* 30 años (1984-2014)
+* 50 plaguicidas
+* 79 combinaciones de suelo y clima de la región pampeana
+
+
+```{nomnoml}
+
+[S] - [a]
+# [118500 simulaciones]-[50 palguicidas]
+# [118500 simulaciones]-[79 unidades suelo clima]
+```
+
+
+
+---
+
+> ¿Cuál es la unidad suelo-clima que por sus características es más crítica para la contaminación de los cuerpos de agua superficiales por plaguicidas en la región pampeana?
+
+--
+
+> ¿Puedo estimar para diferentes plaguicidas un valor de concentración en el cuerpo de agua que sea lo suficientemente representativo toda la región pampeana?
+
+
+---
+
+class: inverse, center, middle
+
+## DESAFIOS
+
+
+---
+
+class: middle, inverse
+
+* ### Reproducibilidad computacional 
+
+* ### Comunicación de mis resultados
+
+---
+
+class: middle
+
+* ### **Reproducibilidad computacional** 
+
+* ### Comunicación de mis resultados
+
+---
+
+## Reproducibilidad computacional
+
+* Dejando código y datos disponibles
+* Compartiendo mi trabajo / cápsula del tiempo
+* Dar suficiente crédito (al trabajo propio y ajeno)
+* Mejora mi flujo de trabajo
+* Mejorar la calidad de mi trabajo
+
+
+
+
+---
+
+## Dejando código y datos disponibles
+#### ¿Por qué?
+
+.panelset[
+.panel[.panel-name[Principios FAIR]
+
+]
+
+.panel[.panel-name[Ciencia abierta]
+
+]
+]
+
+
+
+
+---
+
+class: center, middle, inverse
+
+## ¿Basta con dejar el código y los datos disponibles?
+
+---
+
+# Reproducibilidad computacional
+
+.panelset[
+.panel[.panel-name[¿Qué es?]
+hola
+]
+
+.panel[.panel-name[Ejemplos]
+
+
+]
+
+.panel[.panel-name[Entornos]
+
+*  session.info()
+* "Empaquetar" los datos
+*  Paquetes de manejo de dependencias (renv)
+*  Notebooks interactivas (Binder / RStudio Cloud)
+
+Recomiendo, esta charla que dí en R-Ladies BA
+]
+]
+
+.footnote[Más información en el siguiente link]
+
+---
+
+class: inverse, middle, center
+
+## ¿Qué usamos para asegurar la reproducibilidad de los artículos científicos?
+
+---
+
+## Compendio de Investigación
+
+.panelset[
+.panel[.panel-name[¿Qué es?]
+
+]
+
+.panel[.panel-name[Ventajas]
+
+* Programación literaria (`RMarkdown`)
+
+* Estructura de paquete (Archivo DESCRIPTION con las dependencias)
+
+* Manejo de bibliografía integrado (`citr`)
+]
+
+.panel[.panel-name[Estructura]
+
+]
+
+.panel[.panel-name[rrtools]
+
+anna
+
+]
+
+.panel[.panel-name[Ejemplo]
+
+]
+]
+
+--- 
+
+## Compartiendo mi trabajo - Cápsula del tiempo
+
+No solo conservar los entornos me permite poder volver a reproducir mi trabajo si actualice mi software, sino también permite que el código corra independientemente de la computadora en la que este
+
+
+---
+
+## Dar crédito (al trabajo propio y ajeno)
+#### Asignar un DOI
+
+.panelset[
+.panel[.panel-name[¿Qué es?]
+
+]
+
+.panel[.panel-name[Ventajas]
+
+]
+
+.panel[.panel-name[Pasos para obtenerlo]
+
+]
+
+.panel[.panel-name[Citando versiones]
+
+]
+
+]
+
+
+---
+
+## Mejora mi flujo de trabajo
+
+
+* Mi proyecto esta organizado
+
+* No tengo problema en compartirlo con quien quiera.
+
+---
+
+## Mejora la calidad de mi trabajo
+
+* Tweet de la gente
+
+---
+
+## Comunicación de mis resultados
+
+* Aplicación web (**shiny**)
+* Gráficos interactivos (**plotly**)
+
+---
+
+## Shiny
+
+.panelset[
+.panel[.panel-name[¿Qué es?]
+
+]
+
+.panel[.panel-name[Ventajas]
+
+]
+
+.panel[.panel-name[Ejemplo]
+
+]
+
+]
+
+
+
+---
+
+## Gráficos interactivos
+#### Plotly
+
+.panelset[
+.panel[.panel-name[¿Qué es?]
+
+]
+
+.panel[.panel-name[Ventajas]
+
+]
+
+.panel[.panel-name[Ejemplo]
+
+]
+
+]
+
+---
+
+class: inverse, middle, center
+
+
+# Gran finale!
+
+### Tres resultados de mi último artículo
+
+---
+
+class: inverse, middle, center
+
+# Reflexión final
+
+
+
+---
+
+class: inverse, center, middle
+
+### ¡Muchas gracias!
+
+florencia.netlify.com
+@cantoflor_87
+
+---

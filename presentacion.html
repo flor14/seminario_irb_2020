@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Mi próximo artículo científico en R</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dra. Florencia D’Andrea" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script src="libs/js-cookie/js.cookie.js"></script>
+    <script src="libs/peerjs/peerjs.min.js"></script>
+    <script src="libs/tiny.toast/toast.min.js"></script>
+    <link href="libs/xaringanExtra-broadcast/broadcast.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-broadcast/broadcast.js"></script>
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="libs/shareon/shareon.min.js"></script>
+    <link href="libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra_fit-screen/fit-screen.js"></script>
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/dagre/dagre.min.js"></script>
+    <script src="libs/lodash/lodash.js"></script>
+    <script src="libs/nomnoml/nomnoml.js"></script>
+    <script src="libs/nomnoml-binding/nomnoml.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Mi próximo artículo científico en R
+## Reproducibilidad, interactividad y mejores flujos de trabajo
+### Dra. Florencia D’Andrea
+### 2/12/2020
+
+---
+
+
+
+
+
+
+class: inverse, center, middle
+
+# Seminario del Instituto de Recursos Biológicos del INTA
+
+### ¡Los estabamos esperando!
+
+
+---
+
+### El tema de mi postdoc es
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+Desarrollo de herramientas informáticas para evaluar el riesgo de las aplicaciones de plaguicidas para los ecosistemas acuáticos
+]
+
+
+
+---
+
+&gt; Mi trabajo implica usar **modelos** que simulan el destino ambiental de los **plaguicidas** luego de su aplicación. 
+
+
+
+&gt; Los resultados de estos modelos se exigen en otros países como parte del proceso de **regulación** de plaguicidas.
+
+---
+
+&gt; Mi objetivo es estimar concentraciones que pueden alcanzar los mismos en **cuerpos de agua superficiales** de la **región pampeana**
+
+---
+
+## Mi próxima publicación se llama 
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+
+Statistically-based soil-climate exposure scenarios for aquatic pesticide fate modelling and exposure assessment in the Pampa Region of Argentina.
+
+]
+
+--
+
+.bg-washed-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt5[
+
+Escenarios de exposición suelo-clima basados en estadísticas para la modelización del destino de los plaguicidas acuáticos y la evaluación de la exposición en la región pampeana de Argentina.
+
+]
+
+---
+
+En este trabajo realizó 118500 simulaciones. 
+
+Simulo una aplicación de plaguicida anual: 
+* 30 años (1984-2014)
+* 50 plaguicidas
+* 79 combinaciones de suelo y clima de la región pampeana
+
+
+
+```nomnoml
+
+[S]-[a]
+# [118500 simulaciones]-[50 palguicidas]
+# [118500 simulaciones]-[79 unidades suelo clima]
+```
+
+<div id="htmlwidget-ab35dbafdb583cdf023d" style="width:504px;height:504px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ab35dbafdb583cdf023d">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n\n[S]-[a]\n# [118500 simulaciones]-[50 palguicidas]\n# [118500 simulaciones]-[79 unidades suelo clima]","svg":false},"evals":[],"jsHooks":[]}</script>
+
+
+
+---
+
+&gt; ¿Cuál es la unidad suelo-clima que por sus características es más crítica para la contaminación de los cuerpos de agua superficiales por plaguicidas en la región pampeana?
+
+--
+
+&gt; ¿Puedo estimar para diferentes plaguicidas un valor de concentración en el cuerpo de agua que sea lo suficientemente representativo toda la región pampeana?
+
+
+---
+
+class: inverse, center, middle
+
+## DESAFIOS
+
+
+---
+
+class: middle, inverse
+
+* ### Reproducibilidad computacional 
+
+* ### Comunicación de mis resultados
+
+---
+
+class: middle
+
+* ### **Reproducibilidad computacional** 
+
+* ### Comunicación de mis resultados
+
+---
+
+## Reproducibilidad computacional
+
+* Dejando código y datos disponibles
+* Compartiendo mi trabajo / cápsula del tiempo
+* Dar suficiente crédito (al trabajo propio y ajeno)
+* Mejora mi flujo de trabajo
+* Mejorar la calidad de mi trabajo
+
+
+
+
+---
+
+## Dejando código y datos disponibles
+#### ¿Por qué?
+
+.panelset[
+.panel[.panel-name[Principios FAIR]
+
+]
+
+.panel[.panel-name[Ciencia abierta]
+
+]
+]
+
+
+
+
+---
+
+class: center, middle, inverse
+
+## ¿Basta con dejar el código y los datos disponibles?
+
+---
+
+# Reproducibilidad computacional
+
+.panelset[
+.panel[.panel-name[¿Qué es?]
+hola
+]
+
+.panel[.panel-name[Ejemplos]
+
+
+]
+
+.panel[.panel-name[Entornos]
+
+*  session.info()
+* "Empaquetar" los datos
+*  Paquetes de manejo de dependencias (renv)
+*  Notebooks interactivas (Binder / RStudio Cloud)
+
+Recomiendo, esta charla que dí en R-Ladies BA
+]
+]
+
+.footnote[Más información en el siguiente link]
+
+---
+
+class: inverse, middle, center
+
+## ¿Qué usamos para asegurar la reproducibilidad de los artículos científicos?
+
+---
+
+## Compendio de Investigación
+
+.panelset[
+.panel[.panel-name[¿Qué es?]
+
+]
+
+.panel[.panel-name[Ventajas]
+
+* Programación literaria (`RMarkdown`)
+
+* Estructura de paquete (Archivo DESCRIPTION con las dependencias)
+
+* Manejo de bibliografía integrado (`citr`)
+]
+
+.panel[.panel-name[Estructura]
+
+]
+
+.panel[.panel-name[rrtools]
+
+anna
+
+]
+
+.panel[.panel-name[Ejemplo]
+
+]
+]
+
+--- 
+
+## Compartiendo mi trabajo - Cápsula del tiempo
+
+No solo conservar los entornos me permite poder volver a reproducir mi trabajo si actualice mi software, sino también permite que el código corra independientemente de la computadora en la que este
+
+
+---
+
+## Dar crédito (al trabajo propio y ajeno)
+#### Asignar un DOI
+
+.panelset[
+.panel[.panel-name[¿Qué es?]
+
+]
+
+.panel[.panel-name[Ventajas]
+
+]
+
+.panel[.panel-name[Pasos para obtenerlo]
+
+]
+
+.panel[.panel-name[Citando versiones]
+
+]
+
+]
+
+
+---
+
+## Mejora mi flujo de trabajo
+
+
+* Mi proyecto esta organizado
+
+* No tengo problema en compartirlo con quien quiera.
+
+---
+
+## Mejora la calidad de mi trabajo
+
+* Tweet de la gente
+
+---
+
+## Comunicación de mis resultados
+
+* Aplicación web (**shiny**)
+* Gráficos interactivos (**plotly**)
+
+---
+
+## Shiny
+
+.panelset[
+.panel[.panel-name[¿Qué es?]
+
+]
+
+.panel[.panel-name[Ventajas]
+
+]
+
+.panel[.panel-name[Ejemplo]
+
+]
+
+]
+
+
+
+---
+
+## Gráficos interactivos
+#### Plotly
+
+.panelset[
+.panel[.panel-name[¿Qué es?]
+
+]
+
+.panel[.panel-name[Ventajas]
+
+]
+
+.panel[.panel-name[Ejemplo]
+
+]
+
+]
+
+---
+
+class: inverse, middle, center
+
+
+# Gran finale!
+
+### Tres resultados de mi último artículo
+
+---
+
+class: inverse, middle, center
+
+# Reflexión final
+
+
+
+---
+
+class: inverse, center, middle
+
+### ¡Muchas gracias!
+
+florencia.netlify.com
+@cantoflor_87
+
+---
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
