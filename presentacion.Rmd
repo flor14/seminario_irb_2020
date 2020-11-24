@@ -4,8 +4,11 @@ subtitle: "Reproducibilidad, interactividad y mejores flujos de trabajo"
 author: 
   - "Dra. Florencia D'Andrea"
 date: '2/12/2020'
+editor_options: 
+  chunk_output_type: console # agregado para que funcione include_url
 output:
   xaringan::moon_reader:
+    seal: false # saco filmina de inicio
     lib_dir: libs
     css: xaringan-themer.css
     nature:
@@ -22,29 +25,48 @@ options(htmltools.dir.version = FALSE)
 library(xaringanthemer)
 library(xaringanExtra)
 library(tidyverse)
+library(knitr)
+library(icon)
 library(nomnoml)
+library(countdown)
 xaringanExtra::use_logo(
   image_url = "https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/xaringan.png"
 )
 xaringanExtra::use_panelset()
 xaringanExtra::use_broadcast()
 xaringanExtra::use_share_again()
+xaringanExtra::style_share_again(share_buttons = c("twitter", "linkedin"))
 xaringanExtra::use_tachyons()
 xaringanExtra::use_fit_screen()
 xaringanExtra::use_tile_view() # O
-style_duo_accent(
-  primary_color = "#01CC99",
-  secondary_color = "#C3EBE2",
-  inverse_header_color = "#2E414D", 
-  inverse_text_color = "#2E414D",
+style_mono_accent(
+  inverse_background_color = "#72c1bf",
+  header_color = "#218380",
+  inverse_header_color = "#402360", 
+  inverse_text_color = "#402360",
   code_inline_color = "#179c55",
-  link_color= "#245239",
-  text_font_size = "25px",
+  link_color= "#d81159",
+  text_font_size = "24px",
   header_font_google = google_font("Josefin Sans"),
   text_font_google   = google_font("Montserrat", "300", "300i"),
-  code_font_google   = google_font("Fira Mono")
-)
+  code_font_google   = google_font("Fira Mono"),
+  )
+
 ```
+
+
+---
+
+class: inverse, middle
+
+## ¡Hola!
+### Empezamos en 5 minutos
+
+`r countdown(minutes = 5, style = "position: relative; width: min-content;", color_warning_background = "#aecc8c")`
+
+### Tenes tiempo para irte a buscar el ☕ o preparar el agua para el 🧉
+
+---
 
 class: inverse, center, middle
 
@@ -52,15 +74,34 @@ class: inverse, center, middle
 
 ### ¡Los estabamos esperando!
 
+---
+
+class: inverse, center, middle
+
+# Mi próximo artículo científico en R
+# <img src="figs/blue_jane.png" width="150px"/>
+### Bases de datos, Reproducibilidad e Interactividad en las publicaciones científicas
+.large[Dra. Florencia D'Andrea | IRB | 2 Diciembre 2020]
 
 ---
 
-### El tema de mi postdoc es
+class: center, middle, inverse
+
+# Licencia
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">licencia de Creative Commons Reconocimiento 4.0 Internacional</a>
+
+---
+
+## Postdoc 
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 Desarrollo de herramientas informáticas para evaluar el riesgo de las aplicaciones de plaguicidas para los ecosistemas acuáticos
 ]
 
+```{r pc, echo=FALSE, fig.align='center'}
+knitr::include_graphics("imagenes/flyer.png")
+```
 
 
 ---
@@ -71,9 +112,6 @@ Desarrollo de herramientas informáticas para evaluar el riesgo de las aplicacio
 
 > Los resultados de estos modelos se exigen en otros países como parte del proceso de **regulación** de plaguicidas.
 
----
-
-> Mi objetivo es estimar concentraciones que pueden alcanzar los mismos en **cuerpos de agua superficiales** de la **región pampeana**
 
 ---
 
@@ -95,31 +133,46 @@ Escenarios de exposición suelo-clima basados en estadísticas para la modelizac
 
 ---
 
-En este trabajo realizó 118500 simulaciones. 
+# (brevísima) Metodología
 
-Simulo una aplicación de plaguicida anual: 
-* 30 años (1984-2014)
-* 50 plaguicidas
-* 79 combinaciones de suelo y clima de la región pampeana
+* Modelo *Pesticide Water Calculator v1.52* (USEPA)
+
+> Me permite estimar concentraciones que pueden alcanzar los mismos en **cuerpos de agua superficiales** de la **región pampeana**
+
+* Automatización de corridas: 118500 simulaciones
+
+ - 30 años (1984-2014)
+ - 50 plaguicidas
+ - 78 combinaciones de suelo y clima de la región pampeana
 
 
-```{nomnoml}
+```{r figpamp, echo = TRUE}
 
-[S] - [a]
-# [118500 simulaciones]-[50 palguicidas]
-# [118500 simulaciones]-[79 unidades suelo clima]
+
+
 ```
+
+
+. footnote["Mapa"]
+---
+
+# ¿A qué llamamos escenarios?
 
 
 
 ---
 
-> ¿Cuál es la unidad suelo-clima que por sus características es más crítica para la contaminación de los cuerpos de agua superficiales por plaguicidas en la región pampeana?
+# Objetivos
+
+> Detectar una unidad suelo-clima candidata a ser más vulnerable a la contaminación por plaguicidas en cuerpos de agua superficiales.
 
 --
 
-> ¿Puedo estimar para diferentes plaguicidas un valor de concentración en el cuerpo de agua que sea lo suficientemente representativo toda la región pampeana?
+> Estimar un valor de concentración en el cuerpo de agua para cada plaguicida que sea lo suficientemente representativo toda la región pampeana.
 
+--
+
+> Pensar diferentes escenarios de conservación.
 
 ---
 
@@ -132,62 +185,115 @@ class: inverse, center, middle
 
 class: middle, inverse
 
-* ### Reproducibilidad computacional 
+### 👉 **Principios FAIR**
 
-* ### Comunicación de mis resultados
+### Reproducibilidad computacional 
 
----
-
-class: middle
-
-* ### **Reproducibilidad computacional** 
-
-* ### Comunicación de mis resultados
+### Comunicación de mis resultados
 
 ---
 
-## Reproducibilidad computacional
+class: middle, inverse
 
-* Dejando código y datos disponibles
-* Compartiendo mi trabajo / cápsula del tiempo
-* Dar suficiente crédito (al trabajo propio y ajeno)
-* Mejora mi flujo de trabajo
-* Mejorar la calidad de mi trabajo
+### Principios FAIR
 
+### 👉 **Reproducibilidad computacional** 
+
+### Comunicación de mis resultados
+
+
+---
+
+# Los datos
+
+
+```{nomnoml echo=FALSE, svg= TRUE, fig.width = 10}
+
+# direction: down | center 
+#.rlang: fill=#8f8 visual=ellipse title=bold
+
+[base de datos clima] --> [Modelo PWC]
+[base de datos suelo] --> [Modelo PWC]
+[base de datos moleculas] --> [Modelo PWC]
+[Modelo PWC] -> [Resultados]
+[Resultados] - [<rlang> R]
+[<rlang> R] -> [Graficos]
+[<rlang> R] -> [Tablas]
+[<rlang> R] -> [Mapas]
+
+```
+
+Resultados de las 118500 simulaciones
 
 
 
 ---
 
 ## Dejando código y datos disponibles
-#### ¿Por qué?
+#### Ciencia tan abierta como sea posible y tan cerrada como sea necesario
 
 .panelset[
-.panel[.panel-name[Principios FAIR]
-
-]
-
 .panel[.panel-name[Ciencia abierta]
 
+es la práctica de hacer que "los resultados primarios de los resultados de la investigación financiados con fondos públicos, las publicaciones y los datos de la investigación, sean accesibles al público en formato digital sin restricciones o con una restricción mínima".
+
+OECD (2015)
+
+* Estar disponibles publicamente
+
+* Ser reutilizables
+
+* Ser transparente
+
+[The Turing Way Checklist](https://the-turing-way.netlify.app/reproducible-research/open/open-resources.html)]
 ]
-]
+.panel[.panel-name[Principios FAIR]
+
+#### **F**indable
+* Si su repositorio de datos local comparte metadatos con otros agregadores
+* Los investigadores usan ORCID y buscan DOI para resultados de datos de investigación.
+
+#### **A**ccesible
+* Se obtienen DOIs para conjuntos de datos de investigación.
+
+#### **I**nteroperable
+* Si su repositorio de datos institucionales permite que un agregador recopile metadatos.
+
+#### **R**eutilizable
+* Licencias para datos de investigación.
+
+[Library Carpentry](https://librarycarpentry.org/lc-fair-research/01-introduction/index.html)
+]]
 
 
+---
+#### ¿Vale la pena?
 
 
 ---
 
 class: center, middle, inverse
 
-## ¿Basta con dejar el código y los datos disponibles?
+## ¿Basta con dejar el código y los datos disponibles para que tu artículo sea reproducible?
+
+
 
 ---
+
 
 # Reproducibilidad computacional
 
 .panelset[
 .panel[.panel-name[¿Qué es?]
-hola
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+
+ Cuando se proporciona información detallada sobre código, software, hardware y detalles de implementación.
+
+.tr[
+ Stodden, 2014
+]]
+ 
 ]
 
 .panel[.panel-name[Ejemplos]
@@ -296,12 +402,23 @@ No solo conservar los entornos me permite poder volver a reproducir mi trabajo s
 
 ---
 
+class: middle, inverse
+
+### Principios FAIR
+
+### Reproducibilidad computacional
+
+### 👉 ** Resultados interactivos **
+
+---
+
 ## Comunicación de mis resultados
 
 * Aplicación web (**shiny**)
 * Gráficos interactivos (**plotly**)
 
 ---
+
 
 ## Shiny
 
@@ -358,14 +475,96 @@ class: inverse, middle, center
 # Reflexión final
 
 
+---
+
+# The Turing Way
+
+---
+
+# ReproHack
+
+
+
+---
+
+# ReproHack en LatinR 2020
+
+Lista de reproducción en YouTube con 6 charlas
+
+```{r rh, echo=FALSE}
+# knitr::include_url("https://flor14.github.io/latinr-reprohack/index.html#1",
+#                    height = "400px")
+xaringanExtra::embed_xaringan(url = "https://flor14.github.io/latinr-reprohack/index.html#1")
+
+```
+
+---
+
+```{r trt, echo=FALSE, out.height="600", out.width="500"}
+knitr::include_graphics("imagenes/toronto.jpg")
+```
+
+
+---
+class: inverse
+
+# Referencias
+#### Principios FAIR / Ciencia Abierta / Reproducibilidad
+* [The Turing Way book](https://the-turing-way.netlify.app/)
+
+* [OECD (2015), “Making Open Science a Reality”](https://www.fct.pt/dsi/docs/Making_Open_Science_a_Reality.pdf), OECD Science, Technology and Industry Policy Papers, No. 25,
+OECD Publishing, Paris. http://dx.doi.org/10.1787/5jrs2f963zs1-en
+
+* Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18
+
+* [Principios FAIR](https://www.go-fair.org/fair-principles/)
+
+* [Library Carpentry: FAIR Data and Software](https://librarycarpentry.org/lc-fair-research/)
+
+* Data Citation Synthesis Group: Joint Declaration of Data Citation Principles. Martone M. (ed.) San Diego CA: FORCE11; 2014 [https://www.force11.org/group/joint-declaration-data-citation-principles-final].
+
+
+
+---
+class: inverse
+
+# Referencias
+#### Reproducibilidad computacional
+* [The Turing Way book](https://the-turing-way.netlify.app/)
+
+* UseR 2020 
+
+* Victoria Stodden. Edge.org. May 2014. [Online; accessed 27. May 2020]. URL: https://www.edge.org/response-detail/25340.
+
+* Peng RD (2011), Reproducible Research in Computational Science. Science 334(6060): 1226–1227. doi:10.1126/science.1213847.
+
+---
+class: inverse
+
+# Referencias
+#### Herramientas en R
+
+Francisco 
+
+Anna rrtools
+
+drake
+
 
 ---
 
 class: inverse, center, middle
 
-### ¡Muchas gracias!
+## ¡Muchas gracias por su atencion!
 
-florencia.netlify.com
-@cantoflor_87
+<br><br>
+Dra. Florencia D'Andrea <br> **Investigadora postdoctoral** <br>
+`r icon::fa("github")` [flor14]("http://github.com/flor14") <br>
+`r icon::fa("twitter")` [cantoflor87]("http://twitter.com/cantoflor87")<br>
+`r icon::fa("link")` [florencia.netlify.app/es-es/]("https://florencia.netlify.app/es-es/")<br>
+
+ <br> <br>
+
+ Filminas disponibles <https://flor14.github.io/seminario_irb_2020/presentacion.html#1> 
 
 ---
