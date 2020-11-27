@@ -18,18 +18,18 @@
  *  Version: 0.3.0
  *
  * ------------------------------------------------------- */
-@import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserat:Regular,400&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:Bold,700&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Fira+Mono&display=swap);
 
 
 :root {
   /* Fonts */
-  --text-font-family: Montserrat;
+  --text-font-family: Montserat;
   --text-font-is-google: 1;
   --text-font-family-fallback: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial;
   --text-font-base: sans-serif;
-  --header-font-family: 'Josefin Sans';
+  --header-font-family: Merriweather;
   --header-font-is-google: 1;
   --code-font-family: 'Fira Mono';
   --code-font-is-google: 1;
@@ -43,18 +43,18 @@
 
   /* Colors */
   --text-color: #272822;
-  --header-color: #218380;
-  --background-color: #FFFFFF;
-  --link-color: #d81159;
+  --header-color: #2e294e;
+  --background-color: #f0faf9;
+  --link-color: #2E294E;
   --text-bold-color: #43418A;
   --code-highlight-color: rgba(255,255,0,0.5);
-  --inverse-text-color: #402360;
-  --inverse-background-color: #72c1bf;
-  --inverse-header-color: #402360;
-  --title-slide-background-color: #72c1bf;
-  --title-slide-text-color: #402360;
-  --header-background-color: #218380;
-  --header-background-text-color: #FFFFFF;
+  --inverse-text-color: #ffffff;
+  --inverse-background-color: #119da4;
+  --inverse-header-color: #ffffff;
+  --title-slide-background-color: #119da4;
+  --title-slide-text-color: #ffffff;
+  --header-background-color: #2e294e;
+  --header-background-text-color: #f0faf9;
   --base: #43418A;
   --white: #FFFFFF;
   --black: #272822;
@@ -66,7 +66,7 @@ html {
 
 body {
   font-family: var(--text-font-family), var(--text-font-family-fallback), var(--text-font-base);
-  font-weight: 300;
+  font-weight: Regular;
   color: var(--text-color);
 }
 h1, h2, h3 {

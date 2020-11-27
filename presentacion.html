@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Mi próximo artículo científico en R</title>
+    <title>Produciendo mi próximo artículo científico con R</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dra. Florencia D’Andrea" />
     <script src="libs/header-attrs/header-attrs.js"></script>
@@ -23,13 +23,9 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/countdown/countdown.css" rel="stylesheet" />
     <script src="libs/countdown/countdown.js"></script>
-    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
-    <script src="libs/dagre/dagre.min.js"></script>
-    <script src="libs/lodash/lodash.js"></script>
-    <script src="libs/nomnoml/nomnoml.js"></script>
-    <script src="libs/nomnoml-binding/nomnoml.js"></script>
-    <script src="libs/fitvids/fitvids.min.js"></script>
     <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="libs/academicons/css/academicons.min.css" rel="stylesheet" />
+    <script src="libs/fitvids/fitvids.min.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
@@ -41,34 +37,36 @@
 
 
 
----
 
 class: inverse, middle
 
-## ¡Hola!
-### Empezamos en 5 minutos
-
-<div class="countdown" id="timer_5fbd098e" style="right:0;bottom:0;position: relative; width: min-content;" data-warnwhen="0">
+<div class="countdown" id="timer_5fc159d1" style="right:0;bottom:0;position: relative; width: min-content;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
-### Tenes tiempo para irte a buscar el ☕ o preparar el agua para el 🧉
+
+## ¡Hola!
+### Empezamos en 5 minutos
+Tenes tiempo para irte a buscar el ☕ o preparar el agua para el 🧉
 
 ---
 
 class: inverse, center, middle
 
-# Seminario del Instituto de Recursos Biológicos del INTA
+### Seminario del Instituto de Recursos Biológicos del INTA
 
-### ¡Los estabamos esperando!
+¡Los estabamos esperando!
 
 ---
 
 class: inverse, center, middle
 
-# Mi próximo artículo científico en R
+## Produciendo mi próximo artículo científico con R
+Compendios de Investigación, Reproducibilidad e Interactividad en las publicaciones académicas
+ 
 # &lt;img src="figs/blue_jane.png" width="150px"/&gt;
-### Bases de datos, Reproducibilidad e Interactividad en las publicaciones científicas
+
+ 
 .large[Dra. Florencia D'Andrea | IRB | 2 Diciembre 2020]
 
 ---
@@ -94,10 +92,7 @@ Desarrollo de herramientas informáticas para evaluar el riesgo de las aplicacio
 
 &gt; Mi trabajo implica usar **modelos** que simulan el destino ambiental de los **plaguicidas** luego de su aplicación. 
 
-
-
 &gt; Los resultados de estos modelos se exigen en otros países como parte del proceso de **regulación** de plaguicidas.
-
 
 ---
 
@@ -119,34 +114,10 @@ Escenarios de exposición suelo-clima basados en estadísticas para la modelizac
 
 ---
 
-# (brevísima) Metodología
-
-* Modelo *Pesticide Water Calculator v1.52* (USEPA)
-
-&gt; Me permite estimar concentraciones que pueden alcanzar los mismos en **cuerpos de agua superficiales** de la **región pampeana**
-
-* Automatización de corridas: 118500 simulaciones
-
- - 30 años (1984-2014)
- - 50 plaguicidas
- - 78 combinaciones de suelo y clima de la región pampeana
-
-
-
-
-
-. footnote["Mapa"]
----
-
-# ¿A qué llamamos escenarios?
-
-
-
----
-
 # Objetivos
 
-&gt; Detectar una unidad suelo-clima candidata a ser más vulnerable a la contaminación por plaguicidas en cuerpos de agua superficiales.
+&gt; Detectar una unidad suelo-clima candidata a ser más vulnerable a la contaminación por plaguicidas en cuerpos de agua superficiales. 
+
 
 --
 
@@ -155,6 +126,118 @@ Escenarios de exposición suelo-clima basados en estadísticas para la modelizac
 --
 
 &gt; Pensar diferentes escenarios de conservación.
+
+---
+
+# Bases de datos
+
+
+#fill: #FEFEFF
+#lineWidth: 1
+#zoom: 4
+#direction: right
+
+
+# direction: down | center 
+#.rlang: fill=#8f8 visual=ellipse title=bold
+
+[base de datos clima] 
+[base de datos fenología] 
+[base de datos hidrología] 
+[base de datos suelo] 
+[base de datos moléculas] FALSETRUEFALSEFALSEFALSETRUE
+
+Empleo distintas bases de datos
+
+---
+
+# Modelo
+
+**Pesticide Water Calculator v1.52** (USEPA)
+ 
+Automatización de corridas: 
+118500 simulaciones =  30 años `*`  50 plaguicidas `*` 78 suelos - clima 
+
+
+#fill: #FEFEFF
+#lineWidth: 1
+#zoom: 4
+#direction: right
+
+
+# direction: down | center 
+#.rlang: fill=#8f8 visual=ellipse title=bold
+
+[base de datos clima] --&gt; [Modelo PWC]
+[base de datos suelo] --&gt; [Modelo PWC]
+[base de datos fenología] --&gt; [Modelo PWC]
+[base de datos hidrología] --&gt; [Modelo PWC]
+[base de datos moléculas] --&gt; [Modelo PWC]FALSETRUEFALSEFALSEFALSETRUE
+
+&gt; Me permite estimar concentraciones que pueden alcanzar los mismos en **cuerpos de agua superficiales** de la **región pampeana**
+
+---
+
+# Resultados
+
+¡Una nueva base de datos!
+
+
+#fill: #FEFEFF
+#lineWidth: 1
+#zoom: 4
+#direction: right
+
+
+# direction: down | center 
+#.rlang: fill=#8f8 visual=ellipse title=bold
+
+[base de datos clima] --&gt; [Modelo PWC]
+[base de datos suelo] --&gt; [Modelo PWC]
+[base de datos fenología] --&gt; [Modelo PWC]
+[base de datos hidrología] --&gt; [Modelo PWC]
+[base de datos moléculas] --&gt; [Modelo PWC]
+[Modelo PWC] -&gt; [Resultados]FALSETRUEFALSEFALSEFALSETRUE
+
+---
+
+# Las figuras
+
+Proceso los resultados. Obtengo distintos productos para incluir como figuras o como parte de la publicación.
+
+
+#fill: #FEFEFF
+#lineWidth: 1
+#zoom: 4
+#direction: right
+
+
+# direction: down | center 
+#.rlang: fill=#8f8 visual=ellipse title=bold
+
+[base de datos clima] --&gt; [Modelo PWC]
+[base de datos suelo] --&gt; [Modelo PWC]
+[base de datos fenología] --&gt; [Modelo PWC]
+[base de datos hidrología] --&gt; [Modelo PWC]
+[base de datos moléculas] --&gt; [Modelo PWC]
+[Modelo PWC] -&gt; [Resultados]
+[Resultados] - [&lt;rlang&gt; R]
+[&lt;rlang&gt; R] -&gt; [Gráficos]
+[&lt;rlang&gt; R] -&gt; [Tablas]
+[&lt;rlang&gt; R] -&gt; [Mapas]
+FALSETRUEFALSEFALSEFALSETRUE
+
+---
+
+class: inverse
+
+# Contexto
+
+
+---
+
+&lt;img src="imagenes/ReproducibleJourney.jpg" width="700" style="display: block; margin: auto;" /&gt;
+
 
 ---
 
@@ -167,32 +250,166 @@ class: inverse, center, middle
 
 class: middle, inverse
 
-### 👉 **Principios FAIR**
+### 👉 **Compendio de investigación**
 
 ### Reproducibilidad computacional 
 
-### Comunicación de mis resultados
+### Interactividad
+
+---
+
+## Compendio de investigación
+
+.pull-left[
+
+* **Organizar los archivos** de acuerdo a una convención prevalente.
+
+* Proveer **separación entre los datos, métodos y salidas** expresando sin ambiguedades la relación entre las tres.
+
+* Especificar el entorno (+ **reproducibilidad**).
+
+.footnote[Marwick 2018]
+]
+
+.pull-right[
+&lt;img src="imagenes/ResearchCompendium.jpg" width="500" /&gt;
+]
+
+
+---
+
+## Compendio de investigación
+#### Estructura
+
+.pull-left[
+
+Otra persona pueda saber que encontrar por los nombres de los archivos y directorios. 
+
+**Marwick(2018)** Utilizar la estructura de un paquete de R
+
+Crea el paquete `rrtools`
+]
+
+.pull-right[
+&lt;img src="imagenes/small_rc.png" width="400" /&gt;
+]
+
+
+---
+
+## Paquete `rrtools` 
+
+Tutorial 
+
+&lt;img src="imagenes/rc-logo.png" width="100" /&gt;
+
+* Archivo `README.md` que describe el proyecto
+
+*  Programación literaria (`RMarkdown`)
+
+* Estructura de paquete (Archivo DESCRIPTION con las dependencias)
+
+* Manejo de bibliografía integrado (`citr`)
+
+<i class="fas  fa-folder "></i>
+
+---
+
+### ¿Cómo compartir un Compendio de investigación?
+
+.panelset[
+
+.panel[.panel-name[Licencia]
+
+* **Incluir un archivo con la licencia** indica a los demás cómo puede ser reutilizado tu trabajo.
+
+* Los **datos** y las **figuras** podrian tener diferentes licencias.
+
+--
+
+&lt;img src="imagenes/usethis.png" width="50" /&gt;
+
+El paquete `usethis` incluye funciones que agregan la licencia que elijas a tu proyecto:
+
+
+```r
+library(usethis)
+usethis::use_mit_license("Florencia D Andrea")
+```
+]
+
+.panel[.panel-name[Control de versiones]
+
+Sistemas de control de versiones como `Git` &lt;ion-icon name="logo-octocat"&gt;&lt;/ion-icon&gt; es la mejor manera de preservar el historial de cambios en el compendio de investigación.
+
+* Facilita la colaboración privada entre colegas
+sobre el proyecto 
+
+* Facilita la distribución y mantenimiento del compendio en el futuro
+
+]
+.panel[.panel-name[Persistencia]
+
+Asignarle una URLs permanente al repositorio como un `Digital Object Identifier (DOI)` <i class="ai  ai-doi "></i>  
+
+* osf.io <i class="ai  ai-osf "></i>
+ 
+* figshare.com  <i class="ai  ai-figshare "></i>
+
+* zenodo.org &lt;i class="ai ai-zenodo ai-3x"&gt;&lt;/i&gt;
+]
+.panel[.panel-name[Metadata]
+
+Cuando se genera un DOI para un repositorio también se debe proporcionar información básica de metadatos para un registro central que supervisa la creación de DOI:
+
+* CrossRef (principalmente artículos de revistas) 
+
+* DataCite (datos y otros productos) 
+
+]
+
+]
+
+.footnote[Marwick(2018)]
+
 
 ---
 
 class: middle, inverse
 
-### Principios FAIR
+### Compendio de investigación
 
 ### 👉 **Reproducibilidad computacional** 
 
-### Comunicación de mis resultados
+### Interactividad
+
+
+
+
+
+
 
 
 ---
 
-# Los datos
+
+class:inverse, middle, center
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+"El hecho de que un análisis sea reproducible **no garantiza su calidad**, que este sea correcto o la validez de los resultados publicados" - Peng (2011)
+
+]
+
+---
+
+# ¿Qué pasa con el tiempo?
 
 
-<div id="htmlwidget-61dd80b9f214e5b882a9" style="width:720px;height:504px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-61dd80b9f214e5b882a9">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n\n# direction: down | center \n#.rlang: fill=#8f8 visual=ellipse title=bold\n\n[base de datos clima] --> [Modelo PWC]\n[base de datos suelo] --> [Modelo PWC]\n[base de datos moleculas] --> [Modelo PWC]\n[Modelo PWC] -> [Resultados]\n[Resultados] - [<rlang> R]\n[<rlang> R] -> [Graficos]\n[<rlang> R] -> [Tablas]\n[<rlang> R] -> [Mapas]\n","svg":false},"evals":[],"jsHooks":[]}</script>
+```r
+knitr::include_url("https://www.nature.com/articles/d41586-020-02462-7")
+```
 
-Resultados de las 118500 simulaciones
+&lt;iframe src="https://www.nature.com/articles/d41586-020-02462-7" width="100%" height="400px"&gt;&lt;/iframe&gt;
 
 
 
@@ -281,7 +498,13 @@ Recomiendo, esta charla que dí en R-Ladies BA
 ]
 ]
 
-.footnote[Más información en el siguiente link]
+.footnote["Más información en el siguiente link"]
+
+---
+
+# Reproducibilidad computacional
+
+&lt;img src="imagenes/CultureShift.jpg" width="4359" style="display: block; margin: auto 0 auto auto;" /&gt;
 
 ---
 
@@ -289,38 +512,7 @@ class: inverse, middle, center
 
 ## ¿Qué usamos para asegurar la reproducibilidad de los artículos científicos?
 
----
 
-## Compendio de Investigación
-
-.panelset[
-.panel[.panel-name[¿Qué es?]
-
-]
-
-.panel[.panel-name[Ventajas]
-
-* Programación literaria (`RMarkdown`)
-
-* Estructura de paquete (Archivo DESCRIPTION con las dependencias)
-
-* Manejo de bibliografía integrado (`citr`)
-]
-
-.panel[.panel-name[Estructura]
-
-]
-
-.panel[.panel-name[rrtools]
-
-anna
-
-]
-
-.panel[.panel-name[Ejemplo]
-
-]
-]
 
 --- 
 
@@ -373,11 +565,11 @@ No solo conservar los entornos me permite poder volver a reproducir mi trabajo s
 
 class: middle, inverse
 
-### Principios FAIR
+### Compendio de investigación
 
 ### Reproducibilidad computacional
 
-### 👉 ** Resultados interactivos **
+### 👉 **Interactividad**
 
 ---
 
@@ -443,15 +635,23 @@ class: inverse, middle, center
 
 # Reflexión final
 
+---
+
+# ROpenSci
+
+&lt;img src="imagenes/ropensci.png" width="300" style="display: block; margin: auto 0 auto auto;" /&gt;
 
 ---
 
 # The Turing Way
 
+&lt;img src="imagenes/LogoDetailWithText.jpg" width="300" style="display: block; margin: auto 0 auto auto;" /&gt;
+
 ---
 
 # ReproHack
 
+&lt;img src="imagenes/reprohack.png" width="300" style="display: block; margin: auto 0 auto auto;" /&gt;
 
 
 ---
@@ -467,7 +667,7 @@ Lista de reproducción en YouTube con 6 charlas
 
 ---
 
-&lt;img src="imagenes/toronto.jpg" width="500" height="600" /&gt;
+&lt;img src="imagenes/toronto.jpg" width="500" height="600" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -507,7 +707,7 @@ class: inverse
 class: inverse
 
 # Referencias
-#### Herramientas en R
+#### Herramientas en R / COmpendios
 
 Francisco 
 
@@ -515,6 +715,7 @@ Anna rrtools
 
 drake
 
+https://zenodo.org/communities/research-compendium/?page=1&amp;size=20
 
 ---
 
