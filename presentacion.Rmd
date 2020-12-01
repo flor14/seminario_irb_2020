@@ -46,8 +46,8 @@ style_mono_accent(
   code_inline_color = "#179c55",
   link_color= "#2E294E",
   text_font_size = "24px",
-  header_font_google = google_font("Merriweather", "Bold", "700"),
-  text_font_google   = google_font("Montserat", "Regular", "400"),
+  header_font_google = google_font("Poppins", "Regular", "400"),
+  text_font_google   = google_font("Darker Grotesque", "500"),
   code_font_google   = google_font("Fira Mono"),
   )
 
@@ -74,15 +74,15 @@ class: inverse, center, middle
 
 ---
 
-class: inverse, center, middle
+background-image: url(imagenes/back2.jpg)
+background-size: cover
+class: middle, center
 
-## Produciendo mi próximo artículo científico con R
-Compendios de Investigación, Reproducibilidad e Interactividad en las publicaciones académicas
+## Produciendo mi próximo artículo científico con R:
+### Compendios de Investigación, Reproducibilidad e Interactividad en las publicaciones académicas
  
-# <img src="figs/blue_jane.png" width="150px"/>
-
  
-.large[Dra. Florencia D'Andrea | IRB | 2 Diciembre 2020]
+.large[#### Dra. Florencia D'Andrea | Instituto de Recursos Biológicos]
 
 ---
 
@@ -121,13 +121,7 @@ Statistically-based soil-climate exposure scenarios for aquatic pesticide fate m
 
 ]
 
---
 
-.bg-washed-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt5[
-
-Escenarios de exposición suelo-clima basados en estadísticas para la modelización del destino de los plaguicidas acuáticos y la evaluación de la exposición en la región pampeana de Argentina.
-
-]
 
 ---
 
@@ -148,16 +142,20 @@ Escenarios de exposición suelo-clima basados en estadísticas para la modelizac
 
 # Bases de datos
 
+* Suelo
+* Fenología
+* Hidrología
+* Clima
+* Moléculas
+
 ```{nomnoml echo=FALSE, svg= TRUE, fig.width = 10}
 
 # direction: down | center 
 #.rlang: fill=#8f8 visual=ellipse title=bold
 
-[base de datos clima] 
-[base de datos fenología] 
-[base de datos hidrología] 
-[base de datos suelo] 
-[base de datos moléculas] 
+[base de datos 1] 
+[base de datos 2] 
+[base de datos *n*] 
 ```
 
 Empleo distintas bases de datos
@@ -174,13 +172,11 @@ Automatización de corridas:
 ```{nomnoml echo=FALSE, svg= TRUE, fig.width = 10}
 
 # direction: down | center 
-#.rlang: fill=#8f8 visual=ellipse title=bold
+#.high: fill=#8f8 title=bold
 
-[base de datos clima] --> [Modelo PWC]
-[base de datos suelo] --> [Modelo PWC]
-[base de datos fenología] --> [Modelo PWC]
-[base de datos hidrología] --> [Modelo PWC]
-[base de datos moléculas] --> [Modelo PWC]
+[base de datos 1] --> [<high>Modelo PWC]
+[base de datos 2] --> [<high>Modelo PWC]
+[base de datos *n*] --> [<high>Modelo PWC]
 ```
 
 > Me permite estimar concentraciones que pueden alcanzar los mismos en **cuerpos de agua superficiales** de la **región pampeana**
@@ -194,19 +190,17 @@ Automatización de corridas:
 ```{nomnoml echo=FALSE, svg= TRUE, fig.width = 10}
 
 # direction: down | center 
-#.rlang: fill=#8f8 visual=ellipse title=bold
+#.high: fill=#8f8 title=bold
 
-[base de datos clima] --> [Modelo PWC]
-[base de datos suelo] --> [Modelo PWC]
-[base de datos fenología] --> [Modelo PWC]
-[base de datos hidrología] --> [Modelo PWC]
-[base de datos moléculas] --> [Modelo PWC]
-[Modelo PWC] -> [Resultados]
+[base de datos 1] --> [Modelo PWC]
+[base de datos 2] --> [Modelo PWC]
+[base de datos *n*] --> [Modelo PWC]
+[Modelo PWC] -> [<high>Resultados]
 ```
 
 ---
 
-# Las figuras
+# Las Figuras
 
 Proceso los resultados. Obtengo distintos productos para incluir como figuras o como parte de la publicación.
 
@@ -214,26 +208,76 @@ Proceso los resultados. Obtengo distintos productos para incluir como figuras o 
 
 # direction: down | center 
 #.rlang: fill=#8f8 visual=ellipse title=bold
+#.high: fill=#8f8 title=bold
 
 [base de datos clima] --> [Modelo PWC]
 [base de datos suelo] --> [Modelo PWC]
-[base de datos fenología] --> [Modelo PWC]
-[base de datos hidrología] --> [Modelo PWC]
 [base de datos moléculas] --> [Modelo PWC]
 [Modelo PWC] -> [Resultados]
 [Resultados] - [<rlang> R]
-[<rlang> R] -> [Gráficos]
-[<rlang> R] -> [Tablas]
-[<rlang> R] -> [Mapas]
+[<rlang> R] -> [<high>Gráficos]
+[<rlang> R] -> [<high>Tablas]
+[<rlang> R] -> [<high>Mapas]
 
 ```
 
 ---
 
-class: inverse
+class: inverse, middle, center
 
 # Contexto
 
+---
+
+## ¿Podes volver a reproducir tu código?
+
+```{r nt, echo=FALSE, out.width=400, fig.align='center'}
+knitr::include_graphics("imagenes/nature1.png")
+```
+
+.footnote[[Artículo de Nature](https://www.nature.com/articles/d41586-020-02462-7)]
+
+
+---
+
+# ¿Un cambio cultural?
+
+.pull-up[
+```{r cd, echo=FALSE, out.width=400, fig.align='center'}
+knitr::include_graphics("imagenes/codecheck.png")
+```
+.footnote[[Codecheck](https://www.nature.com/articles/d41586-020-02462-7)]
+ ]
+ 
+.pull-down[
+```{r cd2, echo=FALSE, out.width=700, fig.align='center'}
+knitr::include_graphics("imagenes/codecheck2.png")
+```
+
+]
+
+---
+
+# ¿Un cambio cultural?
+
+```{r tw, echo=FALSE, out.width=600,fig.align='center'}
+knitr::include_graphics("imagenes/tw_rh.png")
+```
+
+.footnote[[Twitter ReproHack](https://www.nature.com/articles/d41586-020-02462-7)]
+
+---
+
+# Reproducibilidad computacional
+
+```{r repro, echo = FALSE, fig.align='right'}
+knitr::include_graphics("imagenes/CultureShift.jpg")
+```
+.footnote[[Scriberia](https://www.nature.com/articles/d41586-020-02462-7)]
+---
+class: inverse, middle, center
+# 🙌👩‍💻
+# ¡Manos a la obra!
 
 ---
 
@@ -241,12 +285,132 @@ class: inverse
 knitr::include_graphics("imagenes/ReproducibleJourney.jpg")
 ```
 
+---
+
+## Software y datos
+
+* Los **datos** son hechos u observaciones que proporcionan **evidencia**. 
+
+* El **software** es el resultado de un proceso creativo que **proporciona una herramienta** para hacer algo, por ejemplo, con datos.
+
+
+-> El software es ejecutable.
+
+-> El software a menudo se crea con otro software.
+
+.footnote[Towards FAIR principles for research software]
+
+---
+
+# Software para investigación
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+"Software que se utiliza para generar, procesar o analizar los resultados que desea que aparezcan en una **publicación** (ya sea en una revista, artículo de conferencia, monografía, libro o tesis)"]
+
+.footnote[Hettrick *et al.* (2014)]
+
+---
+
+### Dejando código y datos disponibles
+#### Ciencia tan abierta como sea posible y tan cerrada como sea necesario
+
+.panelset[
+.panel[.panel-name[Ciencia abierta]
+
+es la práctica de dejar "los resultados primarios de investigaciones financiados con fondos públicos, las publicaciones y los datos sean accesibles al público en formato digital sin restricciones o con una restricción mínima".
+
+OECD (2015)
+
+* Estar disponibles publicamente
+
+* Ser reutilizables
+
+* Ser transparente
+
+[The Turing Way Checklist](https://the-turing-way.netlify.app/reproducible-research/open/open-resources.html)
+]
+.panel[.panel-name[Principios FAIR]
+
+Ciencia tan abierto como sea posible, tan cerrado como sea necesario” (abierto por defecto)
+
+#### **F**indable
+* Ejemplo: Los investigadores usan ORCID y buscan DOI para resultados de datos de investigación.
+
+#### **A**ccesible
+* Se obtienen DOIs para conjuntos de datos de investigación.
+
+#### **I**nteroperable
+* Si su repositorio de datos institucionales permite que un agregador recopile metadatos.
+
+#### **R**eutilizable
+* Licencias para datos de investigación.
+
+[Library Carpentry](https://librarycarpentry.org/lc-fair-research/01-introduction/index.html)
+]]
+
+
+---
+
+## Los datos y el software se citan
+
+#### Autores de artículos
+* Citar datos y software que usas
+* Publica tu propios datos y software y citalos también
+* Obtené un ORCID id
+
+--
+#### Para quienes generan datos
+* Depositalos en un repositorio "estable" 
+* Obtené un DOI
+* Incluí un ejemplo de cómo citarlo en el README
+
+
+.footnote[[The Turing Way - Credit for reproducible research](https://the-turing-way.netlify.app/reproducible-research/credit.html?highlight=cite%20data)]
+
+---
+
+
+
+
+---
+## Los datos y el software se citan
+#### Para quienes desarrollan software
+
+* Deposite versiones clave de su software en un repositorio estable
+
+* Obtenga un DOI distinto para cada versión
+
+* Incluya un ejemplo de cómo citar su software en el manual o documentación
+
+#### Ejemplo
+v1.0 (specific version): 10.5281/zenodo.60943
+v1.1 (specific version): 10.5281/zenodo.800648
+Concept (all versions): 10.5281/zenodo.705645
+
+.footnote[[The Turing Way - Credit for reproducible research](https://the-turing-way.netlify.app/reproducible-research/credit.html?highlight=cite%20data)]
+.footnote[[Zenodo - DOI versioning](https://help.zenodo.org/#versioning)]
+
+---
+
+```{r doiversion, echo = FALSE, out.width=900, fig.align='center'}
+
+knitr::include_graphics("imagenes/zenodo_versioning.png")
+```
+.footnote[[Zenodo - Zenodo now supports DOI versioning!](https://blog.zenodo.org/2017/05/30/doi-versioning-launched/)]
+
+
+
+---
+# ¿Como hacer a tus datos citables?
+
+# Integración Zenodo - GitHub
 
 ---
 
 class: inverse, center, middle
 
-## DESAFIOS
+## Desafios
+
 
 
 ---
@@ -258,6 +422,8 @@ class: middle, inverse
 ### Reproducibilidad computacional 
 
 ### Interactividad
+
+
 
 ---
 
@@ -389,6 +555,54 @@ Cuando se genera un DOI para un repositorio también se debe proporcionar inform
 
 ---
 
+## Dar crédito (al trabajo propio y ajeno)
+#### Asignar un DOI
+
+.panelset[
+.panel[.panel-name[¿Qué es?]
+
+]
+
+.panel[.panel-name[Ventajas]
+
+]
+
+.panel[.panel-name[Pasos para obtenerlo]
+
+]
+
+.panel[.panel-name[Citando versiones]
+
+]
+
+]
+
+---
+
+## ¿Que agrego cuando agrego un compendio de investigacion?
+
+```{nomnoml echo=FALSE, svg= TRUE, fig.width = 10}
+
+# direction: down | center 
+#.rlang: fill=#8f8 visual=ellipse title=bold
+#.high: fill=#8f8 title=bold
+
+[base de datos clima] --> [Modelo PWC]
+[base de datos suelo] --> [Modelo PWC]
+[base de datos moléculas] --> [Modelo PWC]
+[Modelo PWC] -> [Resultados]
+[Resultados] - [<rlang> R]
+[<rlang> R] -> [Gráficos]
+[<rlang> R] -> [Tablas]
+[<rlang> R] -> [Mapas]
+[<rlang> R] -> [<high>Compendio de investigación]
+
+```
+
+
+
+---
+
 class: middle, inverse
 
 ### Compendio de investigación
@@ -407,64 +621,14 @@ class: middle, inverse
 ---
 
 
-class:inverse, middle, center
+class: middle, center
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-"El hecho de que un análisis sea reproducible **no garantiza su calidad**, que este sea correcto o la validez de los resultados publicados" - Peng (2011)
+####"El hecho de que un análisis sea reproducible **no garantiza su calidad**, que este sea correcto o la validez de los resultados publicados" - Peng (2011)
 
 ]
 
----
 
-# ¿Qué pasa con el tiempo?
-
-```{r nat}
-knitr::include_url("https://www.nature.com/articles/d41586-020-02462-7")
-```
-
-
-
----
-
-## Dejando código y datos disponibles
-#### Ciencia tan abierta como sea posible y tan cerrada como sea necesario
-
-.panelset[
-.panel[.panel-name[Ciencia abierta]
-
-es la práctica de hacer que "los resultados primarios de los resultados de la investigación financiados con fondos públicos, las publicaciones y los datos de la investigación, sean accesibles al público en formato digital sin restricciones o con una restricción mínima".
-
-OECD (2015)
-
-* Estar disponibles publicamente
-
-* Ser reutilizables
-
-* Ser transparente
-
-[The Turing Way Checklist](https://the-turing-way.netlify.app/reproducible-research/open/open-resources.html)]
-]
-.panel[.panel-name[Principios FAIR]
-
-#### **F**indable
-* Si su repositorio de datos local comparte metadatos con otros agregadores
-* Los investigadores usan ORCID y buscan DOI para resultados de datos de investigación.
-
-#### **A**ccesible
-* Se obtienen DOIs para conjuntos de datos de investigación.
-
-#### **I**nteroperable
-* Si su repositorio de datos institucionales permite que un agregador recopile metadatos.
-
-#### **R**eutilizable
-* Licencias para datos de investigación.
-
-[Library Carpentry](https://librarycarpentry.org/lc-fair-research/01-introduction/index.html)
-]]
-
-
----
-#### ¿Vale la pena?
 
 
 ---
@@ -511,13 +675,6 @@ Recomiendo, esta charla que dí en R-Ladies BA
 
 .footnote["Más información en el siguiente link"]
 
----
-
-# Reproducibilidad computacional
-
-```{r repro, echo = FALSE, fig.align='right'}
-knitr::include_graphics("imagenes/CultureShift.jpg")
-```
 
 ---
 
@@ -525,41 +682,40 @@ class: inverse, middle, center
 
 ## ¿Qué usamos para asegurar la reproducibilidad de los artículos científicos?
 
+---
 
 
---- 
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+"El software (...) con frecuencia se desarrolla para permitir el uso de otro software, lo que genera dependencias complejas, y estos paquetes de software dependientes cambian a su vez con frecuencia"]
+
+.footnote[Katz 2016]
+
+
+---
+
+### Entorno computacional 
+
+Características de una computadora que pueden afectar el comportamiento del trabajo realizado en ella, como:
+* su **sistema operativo**
+* qué **software** tiene instalado 
+* las **versiones de paquetes** de software están instaladas
+
+.footnote[The Turing Way]
+---
 
 ## Compartiendo mi trabajo - Cápsula del tiempo
 
 No solo conservar los entornos me permite poder volver a reproducir mi trabajo si actualice mi software, sino también permite que el código corra independientemente de la computadora en la que este
 
+---
+
+# Entornos
+
+* renv
+* DESCR
 
 ---
 
-## Dar crédito (al trabajo propio y ajeno)
-#### Asignar un DOI
-
-.panelset[
-.panel[.panel-name[¿Qué es?]
-
-]
-
-.panel[.panel-name[Ventajas]
-
-]
-
-.panel[.panel-name[Pasos para obtenerlo]
-
-]
-
-.panel[.panel-name[Citando versiones]
-
-]
-
-]
-
-
----
 
 ## Mejora mi flujo de trabajo
 
@@ -573,6 +729,16 @@ No solo conservar los entornos me permite poder volver a reproducir mi trabajo s
 ## Mejora la calidad de mi trabajo
 
 * Tweet de la gente
+
+---
+
+## Recomendación
+
+[Post](https://florencia.netlify.app/es-es/2020/08/compartiendo-entornos-interactivos-y-reproducibles-en-r-con-binder.es-es/) sobre Binder en R-Ladies BA (incluye charla)
+
+```{r binder, echo=FALSE}
+knitr::include_url("https://flor14.github.io/r_de_reproducibilidad/r_de_reproducibilidad.html#1")
+```
 
 ---
 
@@ -590,6 +756,7 @@ class: middle, inverse
 
 * Aplicación web (**shiny**)
 * Gráficos interactivos (**plotly**)
+* Papers interactivos y reproducibles (**stencila**)
 
 ---
 
@@ -606,6 +773,11 @@ class: middle, inverse
 ]
 
 .panel[.panel-name[Ejemplo]
+
+App 1 - 
+
+App 2-
+
 
 ]
 
@@ -637,16 +809,23 @@ class: middle, inverse
 
 class: inverse, middle, center
 
+# Articulo reproducible
+Mostrar que esto existe
 
-# Gran finale!
+[Artículo reproducible](https://elifesciences.org/articles/30274/executable)
 
-### Tres resultados de mi último artículo
+[stenci.la](https://stenci.la/)
+
 
 ---
 
 class: inverse, middle, center
 
-# Reflexión final
+# Mi trabajo
+
+[Shiny app]()
+
+[]()
 
 ---
 
@@ -656,6 +835,10 @@ class: inverse, middle, center
 knitr::include_graphics("imagenes/ropensci.png")
 ```
 
+[Web](https://ropensci.org/)
+
+
+
 ---
 
 # The Turing Way
@@ -663,6 +846,8 @@ knitr::include_graphics("imagenes/ropensci.png")
 ```{r open, echo = FALSE, out.width=300, fig.align='right'}
 knitr::include_graphics("imagenes/LogoDetailWithText.jpg")
 ```
+
+Libro de [The Turing Way](https://the-turing-way.netlify.app/welcome)
 
 ---
 
@@ -697,6 +882,7 @@ class: inverse
 #### Principios FAIR / Ciencia Abierta / Reproducibilidad
 * [The Turing Way book](https://the-turing-way.netlify.app/)
 
+* [Lista de recursos sobre Research compendium](https://research-compendium.science/)
 * [OECD (2015), “Making Open Science a Reality”](https://www.fct.pt/dsi/docs/Making_Open_Science_a_Reality.pdf), OECD Science, Technology and Industry Policy Papers, No. 25,
 OECD Publishing, Paris. http://dx.doi.org/10.1787/5jrs2f963zs1-en
 
@@ -708,7 +894,11 @@ OECD Publishing, Paris. http://dx.doi.org/10.1787/5jrs2f963zs1-en
 
 * Data Citation Synthesis Group: Joint Declaration of Data Citation Principles. Martone M. (ed.) San Diego CA: FORCE11; 2014 [https://www.force11.org/group/joint-declaration-data-citation-principles-final].
 
+* Katz DS, Niemeyer KE, Smith AM, Anderson WL, Boettiger C, Hinsen K, Hooft R, Hucka M, Lee A, Löffler F, Pollard T, Rios F. 2016. Software vs. data in the context of citation. PeerJ Preprints 4:e2630v1 https://doi.org/10.7287/peerj.preprints.2630v1
 
+* [Improve your workflow for
+reproducible science
+Mine Çetinkaya-Rundel](https://mine-cetinkaya-rundel.github.io/improve-repro-workflow-reproducibilitea-2020/slides/improve-repro-workflow-reproducibilitea-2020.pdf) 
 
 ---
 class: inverse
