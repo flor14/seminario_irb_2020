@@ -876,6 +876,7 @@ knitr::include_graphics("imagenes/ropensci.png")
 .pull-left[
 [Web](https://ropensci.org/)
 
+[Twitter de ROpenSci](https://ropensci.org/)
 ]
 
 ---
@@ -889,7 +890,11 @@ knitr::include_graphics("imagenes/LogoDetailWithText.jpg")
 ]
 .pull-left[
 Libro de [The Turing Way](https://the-turing-way.netlify.app/welcome)
+
+[Twitter de The Turing Way]()
 ]
+
+
 ---
 
 # ReproHack
@@ -901,6 +906,8 @@ knitr::include_graphics("imagenes/reprohack.png")
 ]
 
 .pull-left[
+
+[Twitter de ReproHack]()
 
 ]
 ---
@@ -990,6 +997,6 @@ Dra. Florencia D'Andrea <br> **Investigadora postdoctoral** <br>
 
  <br> <br>
 
- Filminas disponibles <https://flor14.github.io/seminario_irb_2020/presentacion.html#1> 
+ Filminas disponibles <[bit.ly/seminarioirb](https://flor14.github.io/seminario_irb_2020/presentacion.html#1)> 
 
 ---
