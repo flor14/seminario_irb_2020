@@ -39,12 +39,12 @@ xaringanExtra::use_fit_screen()
 xaringanExtra::use_tile_view() # O
 style_mono_accent(
   background_color = "#ffffff",
-  inverse_background_color = "#007D95",
+  inverse_background_color = "#457A9A",
   header_color = "#2C2788",
   inverse_header_color = "#DEDCDD", 
   inverse_text_color = "#DEDCDD",
   code_inline_color = "#179c55",
-  link_color= "#BF0002",
+  link_color= "#940019",
   text_font_size = "25px",
   header_font_google = google_font("Poppins", "Regular", "400"),
   text_font_google   = google_font("Darker Grotesque", "500"),
@@ -74,21 +74,23 @@ class: inverse, center, middle
 
 ---
 
-background-image: url(imagenes/1.png)
+background-image: url(imagenes/3.png)
 background-size: cover
-class: inverse
+class: bottom
 
-### Produciendo mi próximo artículo científico con R:
-#### Compendios de Investigación, Reproducibilidad e Interactividad en las publicaciones académicas
+### Produciendo mi próximo artículo científico con R: Compendios de Investigación, Reproducibilidad e Interactividad en las publicaciones académicas
 
+
+
+ .large[#### Dra. Florencia D'Andrea | Instituto de Recursos Biológicos | 2 de Diciembre de 2020 
+]
+
+ 
 ```{r logos, echo = FALSE, out.width=100}
 
 knitr::include_graphics("imagenes/inta_conicet.jpg")
 
 ```
-
- .large[#### Dra. Florencia D'Andrea | Instituto de Recursos Biológicos | 2 de diciembre 2020]
-
 
 
 ---
@@ -110,23 +112,22 @@ class: inverse, middle, center
 
 ---
 
-class: center, middle
-
-```{r researchc, echo = FALSE, out.width=800}
+```{r researchc, echo = FALSE, out.width=700, fig.align='center'}
 knitr::include_graphics("imagenes/ResearchCycle.jpg")
 ```
 
+.footnote[[Imagen: The Turing Way Community, & Scriberia (2020). ](http://doi.org/10.5281/zenodo.3695300)]
 ---
 
-# Desafio
-### Código y datos disponibles
+## Desafío
+#### Código y datos disponibles
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 #### **Ciencia abierta** práctica de dejar "los resultados primarios de investigaciones financiados con fondos públicos, los artículos y los datos sean accesibles al público en formato digital sin restricciones o con una restricción mínima".]
 
 
-.footnote[[The Turing Way Checklist](https://the-turing-way.netlify.app/reproducible-research/open/open-resources.html) / 
-[OECD (2015)]()]
+.footnote[[The Turing Way Community (2019)](https://the-turing-way.netlify.app/reproducible-research/open/open-resources.html) / 
+[OECD (2015)](https://www.fct.pt/dsi/docs/Making_Open_Science_a_Reality.pdf)]
 
 ---
 
@@ -151,38 +152,35 @@ Se requiere claridad y transparencia en torno a las condiciones que rigen el acc
 #### **F**indable | **A**ccesible | **I**nteroperable | **R**eusable
 
 .footnote[
-[Mons et al. (2017) Information Services & Use 37, 49-56](https://content.iospress.com/articles/information-services-and-use/isu824)
+[Mons et al. (2017)](https://content.iospress.com/articles/information-services-and-use/isu824) / [Imagen: The Turing Way Community, & Scriberia. (2020). ](http://doi.org/10.5281/zenodo.3695300)
 ]
 
 ---
-
-class: center, middle
 
 ```{r journey, echo = FALSE, out.width=700, fig.align='center'}
 knitr::include_graphics("imagenes/ReproducibleJourney.jpg")
 ```
 
 
-.footnote[[The Turing Way Community, & Scriberia. (2020, March 3). Illustrations from the Turing Way book dashes]( http://doi.org/10.5281/zenodo.3695300)]
+.footnote[[Imagen: The Turing Way Community, & Scriberia (2020)]( http://doi.org/10.5281/zenodo.3695300)]
+
 ---
 
-## Software y datos 
-
-#### Datos
+## Datos
  Son hechos u observaciones que proporcionan **evidencia**. 
  
 --
 
-#### Software 
+## Software 
 Es el resultado de un proceso creativo que **proporciona una herramienta** para hacer algo, por ejemplo, con datos.
 
 > El software es ejecutable.
 
-> El software a menudo se desarrolla a partir de otro software.
+> El software a menudo se desarrolla usando otro software.
 
 --
 
-.footnote[Towards FAIR principles for research software]
+.footnote[[Lamprecht et al. (2020)](https://content.iospress.com/articles/data-science/ds190026)]
 
 ---
 
@@ -193,43 +191,49 @@ Es el resultado de un proceso creativo que **proporciona una herramienta** para 
 #### Es que se utiliza para generar, procesar o analizar los resultados para una **publicación** (ya sea en una revista, resumen para congreso, monografía, libro o tesis)
 #### Puede comprender desde unas **pocas líneas de código** (...), hasta un paquete de software desarrollado profesionalmente.]
 
-.footnote[[Hettrick *et al.* (2014)](https://doi.org/10.5281/zenodo.608046)]
+.footnote[[Hettrick et al. (2014)](https://doi.org/10.5281/zenodo.608046)]
 
 ---
 
 ## Los datos y el software se citan
 
 #### Autores de artículos
+
 * Citar datos y software que usas
 
 * Publica tu propios datos y software y citalos también
 
---
-#### Para quienes generan datos
-* Depositalos en un repositorio "estable" 
+```{r data2, echo = FALSE, out.width=800, fig.align='center'}
+
+knitr::include_graphics("imagenes/data_available.png")
+```
+.footnote[Más formas de citar datos en [The Turing Way Community (2019) - Credit for reproducible research](https://the-turing-way.netlify.app/reproducible-research/credit.html?highlight=cite%20data)]
+---
+
+## Los datos y el software se citan
+#### Para quienes generan datos y software
+
+* Depositalo/s en un repositorio "estable" (ej. Zenodo, Figshare, etc)
 
 * Obtené una URLs permanente al repositorio como un `Digital Object Identifier (DOI)`
 
-* Incluí un ejemplo de cómo citarlo en el README
+* Incluí un ejemplo de cómo citarlo en el README o documentación
 
+```{r data, echo = FALSE, out.width=300, fig.align='center'}
 
-.footnote[[The Turing Way Book - Credit for reproducible research](https://the-turing-way.netlify.app/reproducible-research/credit.html?highlight=cite%20data)]
+knitr::include_graphics("imagenes/pwc.png")
+```
 
+.footnote[[The Turing Way Community (2019)](https://the-turing-way.netlify.app/reproducible-research/credit.html?highlight=cite%20data) / [Zenodo - DOI versioning](https://help.zenodo.org/#versioning)]
 
 ---
-## Los datos y el software se citan
-#### Para quienes desarrollan software
 
-* Deposite versiones clave de su software en un repositorio estable
+```{r doiimage, echo = FALSE, out.width=800, fig.align='center'}
 
-* Obtenga un DOI distinto para cada versión
+knitr::include_graphics("imagenes/DOI.jpg")
+```
 
-* Incluya un ejemplo de cómo citar su software en el manual o documentación
-
-
-
-.footnote[[The Turing Way - Credit for reproducible research](https://the-turing-way.netlify.app/reproducible-research/credit.html?highlight=cite%20data) / [Zenodo - DOI versioning](https://help.zenodo.org/#versioning)]
-
+.footnote[[Imagen: The Turing Way Community, & Scriberia (2020)]( http://doi.org/10.5281/zenodo.3695300)]
 ---
 
 ```{r doiversion, echo = FALSE, out.width=900, fig.align='center'}
@@ -250,8 +254,8 @@ class: middle, inverse
 
 
 ---
+class: center, middle
 
-# Distintos tipos de reproducibilidad
 
 ```{nomnoml echo=FALSE, svg= TRUE, fig.width = 10, fig.align = "center"}
 # direction: down | center 
@@ -263,14 +267,14 @@ class: middle, inverse
 
 ```
 
-.footnote[[Stodden et al. 2014](https://www.edge.org/response-detail/25340)]
+.footnote[[Stodden et al. (2014)](https://www.edge.org/response-detail/25340)]
 
 ---
 
 class: center, middle, inverse
 
-### En mi computadora pude reproducir mis resultados
-### **¿puedo considerar que mi trabajo es reproducible?** 
+### En mi computadora pude reproducir mis resultados ...
+### ¿puedo considerar que mi trabajo es reproducible? 
 
 ---
 
@@ -292,23 +296,29 @@ class: center, middle, inverse
 
 ## Ejemplo
 
-```{r error, echo = FALSE, out.width=500, fig.align='center'}
-knitr::include_graphics("imagenes/ErrorManagement.jpg")
+
+[`tidyr v1.0.0`](https://github.com/tidyverse/tidyr/releases) breaking changes 
+
+* Aparecen las funciones `pivot_*()` que reemplazan a `gather()` y `spread()`
+
+```{r tidyer, echo = FALSE, out.width=200, fig.align='center'}
+knitr::include_graphics("imagenes/tidyr.png")
 ```
 
-
-.footnote[[The Turing Way Community, & Scriberia. (2020, March 3). Illustrations from the Turing Way book dashes]( http://doi.org/10.5281/zenodo.3695300)]
+.footnote[Logo de `tidyr` por [RStudio](https://rstudio.com/)]
 
 ---
 
 ## Reproducibilidad computacional
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 
- Cuando se proporciona información detallada sobre código, software, hardware y detalles de implementación.
+#### Cuando se proporciona información detallada sobre software, hardware y detalles de implementación.
 
 .tr[
- Stodden, 2014
+ Stodden et al (2014)
 ]]
+
+
 
 ---
 ## Entorno computacional 
@@ -321,16 +331,25 @@ Características de una computadora que pueden afectar el comportamiento del tra
 
 * las **versiones de paquetes** de software están instaladas
 
-.footnote[The Turing Way]
+.footnote[[The Turing Way Community (2019)](https://the-turing-way.netlify.app/)]
 
 ---
 
+```{r error, echo = FALSE, out.width=500, fig.align='center'}
+knitr::include_graphics("imagenes/ErrorManagement.jpg")
+```
 
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-"El software (...) con frecuencia se desarrolla para permitir el uso de otro software, lo que genera dependencias complejas, y **estos paquetes de software dependientes cambian a su vez con frecuencia**"]
 
-.footnote[Katz 2016]
+#### "El software (...) con frecuencia se desarrolla para permitir el uso de otro software, lo que genera dependencias complejas, y **estos paquetes de software dependientes cambian a su vez con frecuencia**" 
+
+.tr[Katz et al. (2016)]
+]
+
+
+
+.footnote[[Imagen: The Turing Way Community, & Scriberia. (2020)]( http://doi.org/10.5281/zenodo.3695300)]
 
 
 ---
@@ -385,9 +404,9 @@ knitr::include_url("https://flor14.github.io/r_de_reproducibilidad/r_de_reproduc
 
 ---
 
-# Experiencia previa: publicación de código
+## Experiencia previa: publicación de código
 
-```{r joss, echo = FALSE, out.width=700}
+```{r joss, echo = FALSE, out.width=500}
 knitr::include_graphics("imagenes/joss.png")
 ```
 .footnote[D’Andrea (2019). Journal of Open Source Software, 4(37), 785, https://doi.org/10.21105/joss.00785]
@@ -401,26 +420,26 @@ class: center, inverse, middle
 
 ### Ventajas
 
-* Fomenta las colaboraciones (**GitHub/GitLab**)
+* Fomenta las colaboraciones 🤝 (**GitHub/GitLab**)
 
-* Permite seguir la historia de tu proyecto (**git**)
+* Permite seguir la historia de tu proyecto 📜 (Control de versiones **git**)
 
-* Mejoras el flujo de trabajo  (ej: `here`, trabajo con proyectos)
+* Mejoras el flujo de trabajo ⚙️ (ej: `here`, trabajo con proyectos)
 
-* Programación literaria (`RMarkdown`)
-
----
-
-### Ventaja
-
-* Aumenta el impacto de las publicaciones
-
-
-
+* Programación literaria ✍️ (`RMarkdown`)
 
 ---
 
-### Desventajas
+## Ventajas
+
+* Aumenta el impacto de las publicaciones 💥
+
+* Algunas revistas lo solicitan 📰
+
+
+---
+
+## Desventajas 🥺
 
 * Lleva **esfuerzo** preparar el código y las bases de datos para publicar
 
@@ -430,15 +449,18 @@ class: center, inverse, middle
 
 ---
 
+class: middle, center
+
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-####"El hecho de que un análisis sea reproducible **no garantiza su calidad**, que este sea correcto o la validez de los resultados publicados" - Peng (2011)
+####"El hecho de que un análisis sea reproducible **no garantiza su calidad**, que este sea correcto o la validez de los resultados publicados" 
+.tr[Peng (2011)]
 
 ]
 
 
 ---
 
-# ¿Un cambio cultural?
+## ¿Un cambio cultural?
 
 .pull-up[
 ```{r cd, echo=FALSE, out.width=400, fig.align='center'}
@@ -456,7 +478,7 @@ knitr::include_graphics("imagenes/codecheck2.png")
 
 ---
 
-# ¿Un cambio cultural?
+## ¿Un cambio cultural?
 
 ```{r tw, echo=FALSE, out.width=600,fig.align='center'}
 knitr::include_graphics("imagenes/tw_rh.png")
@@ -466,12 +488,13 @@ knitr::include_graphics("imagenes/tw_rh.png")
 
 ---
 
-# Reproducibilidad 
+## Reproducibilidad 
 
 ```{r repro, echo = FALSE, fig.align='right'}
 knitr::include_graphics("imagenes/CultureShift.jpg")
 ```
-.footnote[[Scriberia](https://www.nature.com/articles/d41586-020-02462-7)]
+
+.footnote[[Imagen: The Turing Way Community, & Scriberia. (2020)]( http://doi.org/10.5281/zenodo.3695300)]]
 
 
 ---
@@ -492,12 +515,10 @@ class: inverse, middle, center
 > #### Desarrollo de herramientas informáticas para evaluar el riesgo de las aplicaciones de plaguicidas para los ecosistemas acuáticos
 
 
-```{r pc, echo=FALSE, fig.align='center'}
-#knitr::include_graphics("imagenes/flyer.png")
-```
 
 ---
 class: middle, center
+
 > Mi trabajo implica usar **modelos** que simulan el destino ambiental de los **plaguicidas** luego de su aplicación. 
 
 > En particular, el modelo que uso permite estimar concentraciones de plaguicidas en **cuerpos de agua superficiales**
@@ -505,12 +526,14 @@ class: middle, center
 ```{r pampa, echo=FALSE, fig.align='center'}
 knitr::include_graphics("imagenes/lagunas.png")
 ```
-.footnote[Imagenes tomadas por [Julie Brodeur]()]
+.footnote[Imagenes tomadas por [Julie Brodeur](https://twitter.com/julbrodeur)]
 ---
 
 ## Evaluación de Riesgo Ecotoxicológico (ERE)
 
-Riesgo de aplicaciones de **plaguicidas** sobre la **biota acuática**
+* Riesgo de aplicaciones de **plaguicidas** sobre la **biota acuática**
+
+* El riesgo se estima de la comparación ente ambas concentraciones
 
 ```{nomnoml echo=FALSE, svg= TRUE, fig.width = 10, fig.align = "center"}
 # direction: down | center 
@@ -521,7 +544,7 @@ Riesgo de aplicaciones de **plaguicidas** sobre la **biota acuática**
 
 ```
 
-El riesgo se estima de la comparación ente ambas concentraciones
+
 
 ---
 ## Mi próxima publicación  
@@ -672,12 +695,34 @@ knitr::include_graphics("imagenes/ResearchCompendium.jpg")
 ]
 
 .pull-right[
-```{r rc2, echo = FALSE, out.width=400}
+```{r rc3, echo = FALSE, out.width=400}
 
 knitr::include_graphics("imagenes/small_rc.png")
 
 ```
 ]
+
+---
+
+## ¿Que agrego cuando agrego un compendio de investigacion?
+
+```{nomnoml echo=FALSE, svg= TRUE, fig.width = 10}
+
+# direction: down | center 
+#.rlang: fill=#8f8 visual=ellipse title=bold
+#.high: fill=#8f8 title=bold
+
+[base de datos clima] --> [Modelo PWC]
+[base de datos suelo] --> [Modelo PWC]
+[base de datos moléculas] --> [Modelo PWC]
+[Modelo PWC] -> [Resultados]
+[Resultados] - [<rlang> R]
+[<rlang> R] -> [Gráficos]
+[<rlang> R] -> [Tablas]
+[<rlang> R] -> [Mapas]
+[<rlang> R] -> [<high>Compendio de investigación]
+
+```
 
 ---
 
@@ -688,12 +733,11 @@ knitr::include_graphics("imagenes/small_rc.png")
 knitr::include_graphics("imagenes/rc-logo.png")
 ```
 
+[Paquete (no esta en CRAN)](https://github.com/benmarwick/rrtools)-
+[Tutorial de Anna Krystalli](https://annakrystalli.me/rrresearch/10_compendium.html)
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 El objetivo de `rrtools` es proporcionar instrucciones, plantillas y funciones para hacer un compendio básico adecuado para escribir investigaciones reproducibles con R.]
 
-[Paquete (no esta en CRAN)](https://github.com/benmarwick/rrtools)
-
-[Tutorial de Anna Krystalli](https://annakrystalli.me/rrresearch/10_compendium.html)
 
 ---
 
@@ -757,25 +801,6 @@ Asignarle una URLs permanente al repositorio como un `Digital Object Identifier 
 
 ---
 
-## ¿Que agrego cuando agrego un compendio de investigacion?
-
-```{nomnoml echo=FALSE, svg= TRUE, fig.width = 10}
-
-# direction: down | center 
-#.rlang: fill=#8f8 visual=ellipse title=bold
-#.high: fill=#8f8 title=bold
-
-[base de datos clima] --> [Modelo PWC]
-[base de datos suelo] --> [Modelo PWC]
-[base de datos moléculas] --> [Modelo PWC]
-[Modelo PWC] -> [Resultados]
-[Resultados] - [<rlang> R]
-[<rlang> R] -> [Gráficos]
-[<rlang> R] -> [Tablas]
-[<rlang> R] -> [Mapas]
-[<rlang> R] -> [<high>Compendio de investigación]
-
-```
 
 
 
@@ -803,21 +828,11 @@ class: middle, inverse
 
 ## Shiny
 
-.panelset[
-.panel[.panel-name[¿Qué es?]
+```{r hexshiny, echo = FALSE, out.width=200}
 
-]
+knitr::include_graphics("imagenes/shiny.jpg")
 
-.panel[.panel-name[Ejemplo]
-
-App 1 - 
-
-App 2-
-
-
-]
-
-]
+```
 
 
 
@@ -826,22 +841,17 @@ App 2-
 ## Gráficos interactivos
 #### Plotly
 
-.panelset[
-.panel[.panel-name[¿Qué es?]
+```{r hexplotly, echo = FALSE, out.width=250}
 
-]
+knitr::include_graphics("imagenes/plotly.png")
 
-.panel[.panel-name[Ejemplo]
-
-]
-
-]
+```
 
 ---
 
 class: inverse, middle, center
 
-# Articulo reproducible
+# Artículo reproducible
 Mostrar que esto existe
 
 [Artículo reproducible](https://elifesciences.org/articles/30274/executable)
@@ -849,26 +859,17 @@ Mostrar que esto existe
 [stenci.la](https://stenci.la/)
 
 
----
-
-class: inverse, middle, center
-
-# Mi trabajo
-
-[Shiny app]()
-
-[]()
 
 ---
 class: inverse, middle, center
 
-# Algunos lugares donde encontrar ayuda y buscar información
+### Algunos lugares donde encontrar ayuda y buscar información
 
 ---
 
 # ROpenSci
 
-.pull-rigth[
+.pull-right[
 ```{r ropen, echo = FALSE, out.width=300}
 knitr::include_graphics("imagenes/ropensci.png")
 ```
@@ -876,14 +877,14 @@ knitr::include_graphics("imagenes/ropensci.png")
 .pull-left[
 [Web](https://ropensci.org/)
 
-[Twitter de ROpenSci](https://ropensci.org/)
+[Twitter de ROpenSci](https://twitter.com/rOpenSci)
 ]
 
 ---
 
 # The Turing Way
 
-.pull-rigth[
+.pull-right[
 ```{r open, echo = FALSE, out.width=300, fig.align='right'}
 knitr::include_graphics("imagenes/LogoDetailWithText.jpg")
 ```
@@ -891,7 +892,7 @@ knitr::include_graphics("imagenes/LogoDetailWithText.jpg")
 .pull-left[
 Libro de [The Turing Way](https://the-turing-way.netlify.app/welcome)
 
-[Twitter de The Turing Way]()
+[Twitter de The Turing Way](https://twitter.com/turingway)
 ]
 
 
@@ -899,7 +900,7 @@ Libro de [The Turing Way](https://the-turing-way.netlify.app/welcome)
 
 # ReproHack
 
-.pull-rigth[
+.pull-right[
 ```{r rh, echo = FALSE, out.width=300, fig.align='right'}
 knitr::include_graphics("imagenes/reprohack.png")
 ```
@@ -907,7 +908,7 @@ knitr::include_graphics("imagenes/reprohack.png")
 
 .pull-left[
 
-[Twitter de ReproHack]()
+[Twitter de ReproHack](https://twitter.com/ReproHack)
 
 ]
 ---
@@ -931,15 +932,15 @@ knitr::include_graphics("imagenes/toronto.jpg")
 class: inverse
 
 # Referencias
-#### Principios FAIR / Ciencia Abierta / Reproducibilidad
-* [The Turing Way book](https://the-turing-way.netlify.app/)
+
+* [The Turing Way Community, Becky Arnold, Louise Bowler, Sarah Gibson, Patricia Herterich, Rosie Higman, … Kirstie Whitaker. (2019, March 25). The Turing Way: A Handbook for Reproducible Data Science (Version v0.0.4). Zenodo. http://doi.org/10.5281/zenodo.3233986](https://the-turing-way.netlify.app/)
 
 * [OECD (2015), “Making Open Science a Reality”](https://www.fct.pt/dsi/docs/Making_Open_Science_a_Reality.pdf), OECD Science, Technology and Industry Policy Papers, No. 25,
 OECD Publishing, Paris. http://dx.doi.org/10.1787/5jrs2f963zs1-en
 
 * Wilkinson, M., Dumontier, M., Aalbersberg, I. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18
 
-* [Principios FAIR](https://www.go-fair.org/fair-principles/)
+* [Webpage Principios FAIR](https://www.go-fair.org/fair-principles/)
 
 * [Library Carpentry: FAIR Data and Software](https://librarycarpentry.org/lc-fair-research/)
 
@@ -947,56 +948,59 @@ OECD Publishing, Paris. http://dx.doi.org/10.1787/5jrs2f963zs1-en
 
 * Katz DS, Niemeyer KE, Smith AM, Anderson WL, Boettiger C, Hinsen K, Hooft R, Hucka M, Lee A, Löffler F, Pollard T, Rios F. 2016. Software vs. data in the context of citation. PeerJ Preprints 4:e2630v1 https://doi.org/10.7287/peerj.preprints.2630v1
 
-* [Improve your workflow for
-reproducible science
-Mine Çetinkaya-Rundel](https://mine-cetinkaya-rundel.github.io/improve-repro-workflow-reproducibilitea-2020/slides/improve-repro-workflow-reproducibilitea-2020.pdf) 
+
 
 ---
 class: inverse
 
 # Referencias
 #### Reproducibilidad computacional
-* [The Turing Way book](https://the-turing-way.netlify.app/)
-
 
 * [Lista de recursos sobre Research compendium](https://research-compendium.science/)
 
-
-* UseR 2020 
+* Lamprecht, A. L., Garcia, L., Kuzak, M., Martinez, C., Arcila, R., Martin Del Pico, E., ... & McQuilton, P. (2020). Towards FAIR principles for research software. Data Science, 3(1), 37-59.
 
 * Victoria Stodden. Edge.org. May 2014. [Online; accessed 27. May 2020]. URL: https://www.edge.org/response-detail/25340.
 
 * Peng RD (2011), Reproducible Research in Computational Science. Science 334(6060): 1226–1227. doi:10.1126/science.1213847.
 
-* The Turing Way Community, & Scriberia. (2020, March 3). Illustrations from the Turing Way book dashes. Zenodo. http://doi.org/10.5281/zenodo.3695300
+
+
 ---
+
 class: inverse
 
 # Referencias
-#### Herramientas en R / COmpendios
+#### Herramientas en R / Charlas
 
-Francisco 
+* [Reproducible Environments - RStudio](https://environments.rstudio.com/)
 
-Anna rrtools
+* [renv: Project Environments with R - RStudio blog](https://blog.rstudio.com/2019/11/06/renv-project-environments-for-r/)
 
-drake
+* [Putting the R into Reproducible Research - Anna Krystalli](https://annakrystalli.me/talks/r-in-repro-research.html#1)
 
-https://zenodo.org/communities/research-compendium/?page=1&size=20
+* [Improve your workflow for reproducible science - Mine Çetinkaya-Rundel](https://mine-cetinkaya-rundel.github.io/improve-repro-workflow-reproducibilitea-2020/slides/improve-repro-workflow-reproducibilitea-2020.pdf) 
+
+#### Ilustraciones
+
+* The Turing Way Community, & Scriberia. (2020, March 3). Illustrations from the Turing Way book dashes. Zenodo. http://doi.org/10.5281/zenodo.3695300
 
 ---
 
-class: inverse, center, middle
+background-image: url(imagenes/3.png)
+background-size: cover
+class: center, middle
 
-## ¡Muchas gracias por su atencion!
+## ¡Muchas gracias por su atención!
 
 <br><br>
 Dra. Florencia D'Andrea <br> **Investigadora postdoctoral** <br>
-`r icon::fa("github")` [flor14]("http://github.com/flor14") <br>
-`r icon::fa("twitter")` [cantoflor87]("http://twitter.com/cantoflor87")<br>
+`r icon::fa("github")` [@flor14]("http://github.com/flor14") <br>
+`r icon::fa("twitter")` [@cantoflor_87]("http://twitter.com/cantoflor_87")<br>
 `r icon::fa("link")` [florencia.netlify.app/es-es/]("https://florencia.netlify.app/es-es/")<br>
 
  <br> <br>
 
- Filminas disponibles <[bit.ly/seminarioirb](https://flor14.github.io/seminario_irb_2020/presentacion.html#1)> 
+ Filminas disponibles [bit.ly/seminarioirb](https://flor14.github.io/seminario_irb_2020/presentacion.html#1) 
 
 ---
