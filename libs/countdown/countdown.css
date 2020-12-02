@@ -42,11 +42,11 @@
   color: #3C1009;
 }
 .countdown.running.warning {
-  border-color: #9CB77E;
-  background-color: #aecc8c;
+  border-color: #CFAE24;
+  background-color: #E6C229;
 }
 .countdown.running.warning .countdown-digits {
-  color: #2B3323;
+  color: #39300A;
 }
 
 @-webkit-keyframes blink {

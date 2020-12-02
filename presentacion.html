@@ -23,11 +23,6 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/countdown/countdown.css" rel="stylesheet" />
     <script src="libs/countdown/countdown.js"></script>
-    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
-    <script src="libs/dagre/dagre.min.js"></script>
-    <script src="libs/lodash/lodash.js"></script>
-    <script src="libs/nomnoml/nomnoml.js"></script>
-    <script src="libs/nomnoml-binding/nomnoml.js"></script>
     <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
     <link href="libs/academicons/css/academicons.min.css" rel="stylesheet" />
     <script src="libs/fitvids/fitvids.min.js"></script>
@@ -43,14 +38,14 @@
 
 
 
-class: inverse, middle
+class: inverse, middle, center
 
-<div class="countdown" id="timer_5fc6722d" style="right:0;bottom:0;position: relative; width: min-content;" data-warnwhen="0">
+<div class="countdown" id="timer_5fc71371" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 
-## ¡Hola!
+
 ### Empezamos en 5 minutos
 Tenes tiempo para irte a buscar el ☕ o preparar el agua para el 🧉
 
@@ -64,131 +59,159 @@ class: inverse, center, middle
 
 ---
 
-background-image: url(imagenes/back2.jpg)
+background-image: url(imagenes/1.png)
 background-size: cover
-class: middle, center
+class: inverse
 
-## Produciendo mi próximo artículo científico con R:
-### Compendios de Investigación, Reproducibilidad e Interactividad en las publicaciones académicas
- 
- 
-.large[#### Dra. Florencia D'Andrea | Instituto de Recursos Biológicos]
+### Produciendo mi próximo artículo científico con R:
+#### Compendios de Investigación, Reproducibilidad e Interactividad en las publicaciones académicas
+
+&lt;img src="imagenes/inta_conicet.jpg" width="100" /&gt;
+
+ .large[#### Dra. Florencia D'Andrea | Instituto de Recursos Biológicos | 2 de diciembre 2020]
+
+
 
 ---
 
 class: center, middle, inverse
 
-# Licencia
+
+### Licencia
 
 &lt;a rel="license" href="http://creativecommons.org/licenses/by/4.0/"&gt;&lt;img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;Este obra está bajo una &lt;a rel="license" href="http://creativecommons.org/licenses/by/4.0/"&gt;licencia de Creative Commons Reconocimiento 4.0 Internacional&lt;/a&gt;
 
 ---
 
-## Postdoc 
-
-.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-Desarrollo de herramientas informáticas para evaluar el riesgo de las aplicaciones de plaguicidas para los ecosistemas acuáticos
-]
-
-&lt;img src="imagenes/flyer.png" width="297" style="display: block; margin: auto;" /&gt;
-
-
----
-
-&gt; Mi trabajo implica usar **modelos** que simulan el destino ambiental de los **plaguicidas** luego de su aplicación. 
-
-&gt; Los resultados de estos modelos se exigen en otros países como parte del proceso de **regulación** de plaguicidas.
-
----
-
-## Mi próxima publicación se llama 
-
-.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-
-Statistically-based soil-climate exposure scenarios for aquatic pesticide fate modelling and exposure assessment in the Pampa Region of Argentina.
-
-]
-
-
-
----
-
-# Objetivos
-
-&gt; Detectar una unidad suelo-clima candidata a ser más vulnerable a la contaminación por plaguicidas en cuerpos de agua superficiales. 
-
-
---
-
-&gt; Estimar un valor de concentración en el cuerpo de agua para cada plaguicida que sea lo suficientemente representativo toda la región pampeana.
-
---
-
-&gt; Pensar diferentes escenarios de conservación.
-
----
-
-# Bases de datos
-
-* Suelo
-* Fenología
-* Hidrología
-* Clima
-* Moléculas
-
-<div id="htmlwidget-19db01ac7ad09425701c" style="width:720px;height:504px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-19db01ac7ad09425701c">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n\n# direction: down | center \n#.rlang: fill=#8f8 visual=ellipse title=bold\n\n[base de datos 1] \n[base de datos 2] \n[base de datos *n*] ","svg":false},"evals":[],"jsHooks":[]}</script>
-
-Empleo distintas bases de datos
-
----
-
-# Modelo
-
-**Pesticide Water Calculator v1.52** (USEPA)
- 
-Automatización de corridas: 
-118500 simulaciones =  30 años `*`  50 plaguicidas `*` 78 suelos - clima 
-
-<div id="htmlwidget-7d139eba2da74351a728" style="width:720px;height:504px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7d139eba2da74351a728">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n\n# direction: down | center \n#.high: fill=#8f8 title=bold\n\n[base de datos 1] --> [<high>Modelo PWC]\n[base de datos 2] --> [<high>Modelo PWC]\n[base de datos *n*] --> [<high>Modelo PWC]","svg":false},"evals":[],"jsHooks":[]}</script>
-
-&gt; Me permite estimar concentraciones que pueden alcanzar los mismos en **cuerpos de agua superficiales** de la **región pampeana**
-
----
-
-# Resultados
-
-¡Una nueva base de datos!
-
-<div id="htmlwidget-618bd367a33231358ba4" style="width:720px;height:504px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-618bd367a33231358ba4">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n\n# direction: down | center \n#.high: fill=#8f8 title=bold\n\n[base de datos 1] --> [Modelo PWC]\n[base de datos 2] --> [Modelo PWC]\n[base de datos *n*] --> [Modelo PWC]\n[Modelo PWC] -> [<high>Resultados]","svg":false},"evals":[],"jsHooks":[]}</script>
-
----
-
-# Las Figuras
-
-Proceso los resultados. Obtengo distintos productos para incluir como figuras o como parte de la publicación.
-
-<div id="htmlwidget-b8592c3291c70c446b87" style="width:720px;height:504px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b8592c3291c70c446b87">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n\n# direction: down | center \n#.rlang: fill=#8f8 visual=ellipse title=bold\n#.high: fill=#8f8 title=bold\n\n[base de datos clima] --> [Modelo PWC]\n[base de datos suelo] --> [Modelo PWC]\n[base de datos moléculas] --> [Modelo PWC]\n[Modelo PWC] -> [Resultados]\n[Resultados] - [<rlang> R]\n[<rlang> R] -> [<high>Gráficos]\n[<rlang> R] -> [<high>Tablas]\n[<rlang> R] -> [<high>Mapas]\n","svg":false},"evals":[],"jsHooks":[]}</script>
-
----
-
 class: inverse, middle, center
 
-# Contexto
+## ⚠
+### ¡Atención! 
+#### El foco de esta charla esta en el software y los datos 
 
 ---
 
-## ¿Podes volver a reproducir tu código?
+class: center, middle
+
+&lt;img src="imagenes/ResearchCycle.jpg" width="800" /&gt;
+
+
+---
+# Definición
+### Software para investigación
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+"Software que se utiliza para generar, procesar o analizar los resultados para una **publicación** (ya sea en una revista, artículo de conferencia, monografía, libro o tesis)"]
+
+.footnote[Hettrick *et al.* (2014)]
+
+---
+
+### Desafio: Dejando software y datos disponibles
+
+&gt; **Ciencia abierta** es la práctica de dejar "los resultados primarios de investigaciones financiados con fondos públicos, los artículos y los datos sean accesibles al público en formato digital sin restricciones o con una restricción mínima".
+
+
+.footnote[[The Turing Way Checklist](https://the-turing-way.netlify.app/reproducible-research/open/open-resources.html) / 
+[OECD (2015)]()]
+
+---
+## Principios FAIR
+#### Ciencia tan abierta como sea posible, tan cerrado como sea necesario” (abierto por defecto)
+
+&lt;img src="imagenes/FAIRprinciples.jpg" width="700" /&gt;
+]
+
+.footnote[[Library Carpentry](https://librarycarpentry.org/lc-fair-research/01-introduction/index.html)
+]]]
+
+---
+
+class: middle, inverse
+
+### 👉 **Reproducibilidad** 
+
+### Compendio de investigación
+
+### Interactividad
+
+
+---
+# Reproducibilidad
+
+
+#fill: #FEFEFF
+#lineWidth: 1
+#zoom: 4
+#direction: right
+
+# direction: down | center 
+#.resaltado: fill=#8f8 title=bold
+
+[Reproducibilidad] -&gt; [ Empírica]
+[Reproducibilidad] -&gt; [ &lt;resaltado&gt; Computacional]
+[Reproducibilidad] -&gt; [ Estadística]
+FALSETRUEFALSEFALSEFALSETRUE
+
+.footnote[Stodden et al. 2014]
+---
+
+
+
+## Software y datos abiertos
+
+* Los **datos** son hechos u observaciones que proporcionan **evidencia**. 
+
+* El **software** es el resultado de un proceso creativo que **proporciona una herramienta** para hacer algo, por ejemplo, con datos.
+
+*-&gt;* El software es ejecutable.
+
+*-&gt;* El software a menudo se crea con otro software.
+
+.footnote[Towards FAIR principles for research software]
+
+---
+
+class: center, middle, inverse
+
+## ¿Es suficiente compartir el código y los datos para que otros puedan reproducir mis análisis?
+
+---
+
+
+
+
+---
+
+class: center, middle, inverse
+
+### En mi computadora pude reproducir mis resultados
+### ¿puedo considerar que mi trabajo es reproducible? 
+
+---
+
+## ¿Qué pasa de acá a 10 años?
 
 &lt;img src="imagenes/nature1.png" width="400" style="display: block; margin: auto;" /&gt;
 
 .footnote[[Artículo de Nature](https://www.nature.com/articles/d41586-020-02462-7)]
 
+---
+
+# Experiencia previa: publicación de código
+
+&lt;img src="imagenes/joss.png" width="700" /&gt;
+.footnote[D’Andrea (2019). Journal of Open Source Software, 4(37), 785, https://doi.org/10.21105/joss.00785]
+
 
 ---
+
+class: center, inverse, middle
+# Ciencia **abierta** y **reproducible**
+
+---
+
+
 
 # ¿Un cambio cultural?
 
@@ -216,83 +239,293 @@ class: inverse, middle, center
 
 &lt;img src="imagenes/CultureShift.jpg" width="4359" style="display: block; margin: auto 0 auto auto;" /&gt;
 .footnote[[Scriberia](https://www.nature.com/articles/d41586-020-02462-7)]
+
+
 ---
+
+
 class: inverse, middle, center
 # 🙌👩‍💻
 # ¡Manos a la obra!
 
 ---
+class: inverse, middle, center
+## ¿En qué estoy trabajando?
+
+---
+
+## Postdoc 
+
+&gt; #### Desarrollo de herramientas informáticas para evaluar el riesgo de las aplicaciones de plaguicidas para los ecosistemas acuáticos
+
+
+
+
+---
+class: middle, center
+&gt; Mi trabajo implica usar **modelos** que simulan el destino ambiental de los **plaguicidas** luego de su aplicación. 
+
+&gt; En particular, el modelo que uso permite estimar concentraciones de plaguicidas en **cuerpos de agua superficiales**
+
+&lt;img src="imagenes/lagunas.png" width="859" style="display: block; margin: auto;" /&gt;
+.footnote[Imagenes tomadas por [Julie Brodeur]()]
+---
+
+## Evaluación de Riesgo Ecotoxicológico (ERE)
+
+Riesgo de aplicaciones de **plaguicidas** sobre la **biota acuática**
+
+
+#fill: #FEFEFF
+#lineWidth: 1
+#zoom: 4
+#direction: right
+
+# direction: down | center 
+#.resaltado: fill=#8f8 title=bold
+
+[ERE] -&gt; [&lt;resaltado&gt;caracterización de exposición | concentraciones de plaguicida]
+[ERE] -&gt; [caracterización de efecto | concentraciones relevantes toxicológicamente]
+FALSETRUEFALSEFALSEFALSETRUE
+
+El riesgo se estima de la comparación ente ambas concentraciones
+
+---
+## Mi próxima publicación  
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+
+Statistically-based soil-climate scenarios for aquatic pesticide fate modelling and exposure assessment in the Pampa Region of Argentina.
+
+]
+
+---
+
+# Bases de datos
+
+Empleo distintas bases de datos:
+
+* Suelo
+* Fenología
+* Hidrología
+* Clima
+* Propiedades de plaguicidas
+
+
+#fill: #FEFEFF
+#lineWidth: 1
+#zoom: 4
+#direction: right
+
+
+# direction: down | center 
+#.rlang: fill=#8f8 visual=ellipse title=bold
+
+[base de datos 1] 
+[base de datos 2] 
+[base de datos *n*] FALSETRUEFALSEFALSEFALSETRUE
+
+
+
+---
+
+# Modelo
+
+**Pesticide Water Calculator v1.52** (USEPA)
+ 
+Automatización de corridas: 
+117000 simulaciones =  30 años `*`  50 plaguicidas `*` 78 suelos - clima 
+
+
+
+#fill: #FEFEFF
+#lineWidth: 1
+#zoom: 4
+#direction: right
+
+
+# direction: down | center 
+#.high: fill=#8f8 title=bold
+
+[base de datos 1] --&gt; [&lt;high&gt;Modelo PWC]
+[base de datos 2] --&gt; [&lt;high&gt;Modelo PWC]
+[base de datos *n*] --&gt; [&lt;high&gt;Modelo PWC]FALSETRUEFALSEFALSEFALSETRUE
+
+---
+
+# Resultados
+
+¡Una nueva base de datos!
+
+
+#fill: #FEFEFF
+#lineWidth: 1
+#zoom: 4
+#direction: right
+
+
+# direction: down | center 
+#.high: fill=#8f8 title=bold
+
+[base de datos 1] --&gt; [Modelo PWC]
+[base de datos 2] --&gt; [Modelo PWC]
+[base de datos *n*] --&gt; [Modelo PWC]
+[Modelo PWC] -&gt; [&lt;high&gt;Resultados]FALSETRUEFALSEFALSEFALSETRUE
+
+---
+
+# Las Figuras
+
+Proceso los resultados con R. 
+
+
+#fill: #FEFEFF
+#lineWidth: 1
+#zoom: 4
+#direction: right
+
+
+# direction: down | center 
+#.rlang: fill=#8f8 visual=ellipse title=bold
+#.high: fill=#8f8 title=bold
+
+[base de datos clima] --&gt; [Modelo PWC]
+[base de datos suelo] --&gt; [Modelo PWC]
+[base de datos moléculas] --&gt; [Modelo PWC]
+[Modelo PWC] -&gt; [Resultados]
+[Resultados] - [&lt;rlang&gt; R]
+[&lt;rlang&gt; R] -&gt; [&lt;high&gt;Gráficos]
+[&lt;rlang&gt; R] -&gt; [&lt;high&gt;Tablas]
+[&lt;rlang&gt; R] -&gt; [&lt;high&gt;Mapas]
+FALSETRUEFALSEFALSEFALSETRUE
+
+
+
+---
+
+class: inverse, middle, center
+
+## ¿Y ahora? Publicar
+
+---
 
 &lt;img src="imagenes/ReproducibleJourney.jpg" width="700" style="display: block; margin: auto;" /&gt;
 
----
-
-## Software y datos
-
-* Los **datos** son hechos u observaciones que proporcionan **evidencia**. 
-
-* El **software** es el resultado de un proceso creativo que **proporciona una herramienta** para hacer algo, por ejemplo, con datos.
 
 
--&gt; El software es ejecutable.
-
--&gt; El software a menudo se crea con otro software.
-
-.footnote[Towards FAIR principles for research software]
-
----
-
-# Software para investigación
+class: middle, center
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-"Software que se utiliza para generar, procesar o analizar los resultados que desea que aparezcan en una **publicación** (ya sea en una revista, artículo de conferencia, monografía, libro o tesis)"]
+####"El hecho de que un análisis sea reproducible **no garantiza su calidad**, que este sea correcto o la validez de los resultados publicados" - Peng (2011)
 
-.footnote[Hettrick *et al.* (2014)]
+]
+
+
+
+
+---
+# Programación literaria
+
+### RMarkdown (.Rmd)
+
+
+
+
+
+
+
 
 ---
 
-### Dejando código y datos disponibles
-#### Ciencia tan abierta como sea posible y tan cerrada como sea necesario
+
+# Reproducibilidad computacional
 
 .panelset[
-.panel[.panel-name[Ciencia abierta]
+.panel[.panel-name[¿Qué es?]
 
-es la práctica de dejar "los resultados primarios de investigaciones financiados con fondos públicos, las publicaciones y los datos sean accesibles al público en formato digital sin restricciones o con una restricción mínima".
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 
-OECD (2015)
+ Cuando se proporciona información detallada sobre código, software, hardware y detalles de implementación.
 
-* Estar disponibles publicamente
-
-* Ser reutilizables
-
-* Ser transparente
-
-[The Turing Way Checklist](https://the-turing-way.netlify.app/reproducible-research/open/open-resources.html)
-]
-.panel[.panel-name[Principios FAIR]
-
-Ciencia tan abierto como sea posible, tan cerrado como sea necesario” (abierto por defecto)
-
-#### **F**indable
-* Ejemplo: Los investigadores usan ORCID y buscan DOI para resultados de datos de investigación.
-
-#### **A**ccesible
-* Se obtienen DOIs para conjuntos de datos de investigación.
-
-#### **I**nteroperable
-* Si su repositorio de datos institucionales permite que un agregador recopile metadatos.
-
-#### **R**eutilizable
-* Licencias para datos de investigación.
-
-[Library Carpentry](https://librarycarpentry.org/lc-fair-research/01-introduction/index.html)
+.tr[
+ Stodden, 2014
 ]]
+ 
+]
 
+.panel[.panel-name[Ejemplos]
+
+
+]
+
+.panel[.panel-name[Entornos]
+
+*  session.info()
+* "Empaquetar" los datos
+*  Paquetes de manejo de dependencias (renv)
+*  Notebooks interactivas (Binder / RStudio Cloud)
+
+Recomiendo, esta charla que dí en R-Ladies BA
+]
+]
+
+.footnote["Más información en el siguiente link"]
+
+
+---
+
+class: inverse, middle, center
+
+## ¿Qué usamos para asegurar la reproducibilidad de los artículos científicos?
+
+---
+
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+"El software (...) con frecuencia se desarrolla para permitir el uso de otro software, lo que genera dependencias complejas, y estos paquetes de software dependientes cambian a su vez con frecuencia"]
+
+.footnote[Katz 2016]
+
+
+---
+
+### Entorno computacional 
+
+Características de una computadora que pueden afectar el comportamiento del trabajo realizado en ella, como:
+* su **sistema operativo**
+* qué **software** tiene instalado 
+* las **versiones de paquetes** de software están instaladas
+
+.footnote[The Turing Way]
+---
+
+# Algunas opciones para capturar entornos
+
+* paquete `renv`
+* Binder
+* Docker container
+
+---
+
+## Más sobre entornos
+
+[Post](https://florencia.netlify.app/es-es/2020/08/compartiendo-entornos-interactivos-y-reproducibles-en-r-con-binder.es-es/) sobre Binder en R-Ladies BA (incluye charla)
+
+&lt;iframe src="https://flor14.github.io/r_de_reproducibilidad/r_de_reproducibilidad.html#1" width="100%" height="400px"&gt;&lt;/iframe&gt;
+
+---
+
+
+## Mejora mi flujo de trabajo
+
+
+* Mi proyecto esta organizado
+
+* No tengo problema en compartirlo con quien quiera.
 
 ---
 
 ## Los datos y el software se citan
-
 #### Autores de artículos
 * Citar datos y software que usas
 * Publica tu propios datos y software y citalos también
@@ -306,10 +539,6 @@ Ciencia tan abierto como sea posible, tan cerrado como sea necesario” (abierto
 
 
 .footnote[[The Turing Way - Credit for reproducible research](https://the-turing-way.netlify.app/reproducible-research/credit.html?highlight=cite%20data)]
-
----
-
-
 
 
 ---
@@ -327,40 +556,22 @@ v1.0 (specific version): 10.5281/zenodo.60943
 v1.1 (specific version): 10.5281/zenodo.800648
 Concept (all versions): 10.5281/zenodo.705645
 
-.footnote[[The Turing Way - Credit for reproducible research](https://the-turing-way.netlify.app/reproducible-research/credit.html?highlight=cite%20data)]
-.footnote[[Zenodo - DOI versioning](https://help.zenodo.org/#versioning)]
+.footnote[[The Turing Way - Credit for reproducible research](https://the-turing-way.netlify.app/reproducible-research/credit.html?highlight=cite%20data) / [Zenodo - DOI versioning](https://help.zenodo.org/#versioning)]
 
 ---
 
 &lt;img src="imagenes/zenodo_versioning.png" width="900" style="display: block; margin: auto;" /&gt;
 .footnote[[Zenodo - Zenodo now supports DOI versioning!](https://blog.zenodo.org/2017/05/30/doi-versioning-launched/)]
 
-
-
----
-# ¿Como hacer a tus datos citables?
-
-# Integración Zenodo - GitHub
-
----
-
-class: inverse, center, middle
-
-## Desafios
-
-
-
 ---
 
 class: middle, inverse
 
+### Reproducibilidad
+
 ### 👉 **Compendio de investigación**
 
-### Reproducibilidad computacional 
-
 ### Interactividad
-
-
 
 ---
 
@@ -400,7 +611,13 @@ Crea el paquete `rrtools`
 &lt;img src="imagenes/small_rc.png" width="400" /&gt;
 ]
 
+---
+class: middle, center, inverse
+&gt; "introducen el concepto de compendio como contenedor de los diferentes elementos que componen el documento y sus cálculos (es decir, texto, código, datos, ... ), y como medio de distribución, gestión y actualización de la colección "
 
+
+
+.footnote[Gentleman, R. y Temple Lang, D. (2004) ]
 ---
 
 ## Paquete `rrtools` 
@@ -507,147 +724,30 @@ Cuando se genera un DOI para un repositorio también se debe proporcionar inform
 
 ## ¿Que agrego cuando agrego un compendio de investigacion?
 
-<div id="htmlwidget-e2ae77a97393fcf9ad2f" style="width:720px;height:504px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e2ae77a97393fcf9ad2f">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n\n# direction: down | center \n#.rlang: fill=#8f8 visual=ellipse title=bold\n#.high: fill=#8f8 title=bold\n\n[base de datos clima] --> [Modelo PWC]\n[base de datos suelo] --> [Modelo PWC]\n[base de datos moléculas] --> [Modelo PWC]\n[Modelo PWC] -> [Resultados]\n[Resultados] - [<rlang> R]\n[<rlang> R] -> [Gráficos]\n[<rlang> R] -> [Tablas]\n[<rlang> R] -> [Mapas]\n[<rlang> R] -> [<high>Compendio de investigación]\n","svg":false},"evals":[],"jsHooks":[]}</script>
 
+#fill: #FEFEFF
+#lineWidth: 1
+#zoom: 4
+#direction: right
 
 
----
+# direction: down | center 
+#.rlang: fill=#8f8 visual=ellipse title=bold
+#.high: fill=#8f8 title=bold
 
-class: middle, inverse
+[base de datos clima] --&gt; [Modelo PWC]
+[base de datos suelo] --&gt; [Modelo PWC]
+[base de datos moléculas] --&gt; [Modelo PWC]
+[Modelo PWC] -&gt; [Resultados]
+[Resultados] - [&lt;rlang&gt; R]
+[&lt;rlang&gt; R] -&gt; [Gráficos]
+[&lt;rlang&gt; R] -&gt; [Tablas]
+[&lt;rlang&gt; R] -&gt; [Mapas]
+[&lt;rlang&gt; R] -&gt; [&lt;high&gt;Compendio de investigación]
+FALSETRUEFALSEFALSEFALSETRUE
 
-### Compendio de investigación
 
-### 👉 **Reproducibilidad computacional** 
 
-### Interactividad
-
-
-
-
-
-
-
-
----
-
-
-class: middle, center
-
-.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-####"El hecho de que un análisis sea reproducible **no garantiza su calidad**, que este sea correcto o la validez de los resultados publicados" - Peng (2011)
-
-]
-
-
-
-
----
-
-class: center, middle, inverse
-
-## ¿Basta con dejar el código y los datos disponibles para que tu artículo sea reproducible?
-
-
-
----
-
-
-# Reproducibilidad computacional
-
-.panelset[
-.panel[.panel-name[¿Qué es?]
-
-.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-
- Cuando se proporciona información detallada sobre código, software, hardware y detalles de implementación.
-
-.tr[
- Stodden, 2014
-]]
- 
-]
-
-.panel[.panel-name[Ejemplos]
-
-
-]
-
-.panel[.panel-name[Entornos]
-
-*  session.info()
-* "Empaquetar" los datos
-*  Paquetes de manejo de dependencias (renv)
-*  Notebooks interactivas (Binder / RStudio Cloud)
-
-Recomiendo, esta charla que dí en R-Ladies BA
-]
-]
-
-.footnote["Más información en el siguiente link"]
-
-
----
-
-class: inverse, middle, center
-
-## ¿Qué usamos para asegurar la reproducibilidad de los artículos científicos?
-
----
-
-
-.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-"El software (...) con frecuencia se desarrolla para permitir el uso de otro software, lo que genera dependencias complejas, y estos paquetes de software dependientes cambian a su vez con frecuencia"]
-
-.footnote[Katz 2016]
-
-
----
-
-### Entorno computacional 
-
-Características de una computadora que pueden afectar el comportamiento del trabajo realizado en ella, como:
-* su **sistema operativo**
-* qué **software** tiene instalado 
-* las **versiones de paquetes** de software están instaladas
-
-.footnote[The Turing Way]
----
-
-## Compartiendo mi trabajo - Cápsula del tiempo
-
-No solo conservar los entornos me permite poder volver a reproducir mi trabajo si actualice mi software, sino también permite que el código corra independientemente de la computadora en la que este
-
----
-
-# Entornos
-
-* renv
-* DESCR
-
----
-
-
-## Mejora mi flujo de trabajo
-
-
-* Mi proyecto esta organizado
-
-* No tengo problema en compartirlo con quien quiera.
-
----
-
-## Mejora la calidad de mi trabajo
-
-* Tweet de la gente
-
----
-
-## Recomendación
-
-[Post](https://florencia.netlify.app/es-es/2020/08/compartiendo-entornos-interactivos-y-reproducibles-en-r-con-binder.es-es/) sobre Binder en R-Ladies BA (incluye charla)
-
-&lt;iframe src="https://flor14.github.io/r_de_reproducibilidad/r_de_reproducibilidad.html#1" width="100%" height="400px"&gt;&lt;/iframe&gt;
 
 ---
 
@@ -737,6 +837,11 @@ class: inverse, middle, center
 []()
 
 ---
+class: inverse, middle, center
+
+# Algunos lugares donde encontrar ayuda y buscar información
+
+---
 
 # ROpenSci
 
@@ -815,6 +920,7 @@ class: inverse
 
 * Peng RD (2011), Reproducible Research in Computational Science. Science 334(6060): 1226–1227. doi:10.1126/science.1213847.
 
+* The Turing Way Community, &amp; Scriberia. (2020, March 3). Illustrations from the Turing Way book dashes. Zenodo. http://doi.org/10.5281/zenodo.3695300
 ---
 class: inverse
 

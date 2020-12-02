@@ -34,7 +34,7 @@
   --code-font-family: 'Fira Mono';
   --code-font-is-google: 1;
   --base-font-size: 20px;
-  --text-font-size: 24px;
+  --text-font-size: 25px;
   --code-font-size: 0.9rem;
   --code-inline-font-size: 1em;
   --header-h1-font-size: 2.75rem;
@@ -43,18 +43,18 @@
 
   /* Colors */
   --text-color: #272822;
-  --header-color: #2e294e;
-  --background-color: #f0faf9;
-  --link-color: #2E294E;
+  --header-color: #2C2788;
+  --background-color: #ffffff;
+  --link-color: #BF0002;
   --text-bold-color: #43418A;
   --code-highlight-color: rgba(255,255,0,0.5);
-  --inverse-text-color: #ffffff;
-  --inverse-background-color: #119da4;
-  --inverse-header-color: #ffffff;
-  --title-slide-background-color: #119da4;
-  --title-slide-text-color: #ffffff;
-  --header-background-color: #2e294e;
-  --header-background-text-color: #f0faf9;
+  --inverse-text-color: #DEDCDD;
+  --inverse-background-color: #007D95;
+  --inverse-header-color: #DEDCDD;
+  --title-slide-background-color: #007D95;
+  --title-slide-text-color: #DEDCDD;
+  --header-background-color: #2C2788;
+  --header-background-text-color: #ffffff;
   --base: #43418A;
   --white: #FFFFFF;
   --black: #272822;
@@ -76,7 +76,7 @@ h1, h2, h3 {
 }
 .remark-slide-content {
   background-color: var(--background-color);
-  font-size: 24px;
+  font-size: 25px;
   padding: 16px 64px 16px 64px;
   width: 100%;
   height: 100%;
