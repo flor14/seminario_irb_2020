@@ -40,7 +40,7 @@
 
 class: inverse, middle, center
 
-<div class="countdown" id="timer_5fc71371" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5fc767b3" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -95,35 +95,120 @@ class: center, middle
 
 &lt;img src="imagenes/ResearchCycle.jpg" width="800" /&gt;
 
-
 ---
-# Definición
-### Software para investigación
+
+# Desafio
+### Código y datos disponibles
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-"Software que se utiliza para generar, procesar o analizar los resultados para una **publicación** (ya sea en una revista, artículo de conferencia, monografía, libro o tesis)"]
-
-.footnote[Hettrick *et al.* (2014)]
-
----
-
-### Desafio: Dejando software y datos disponibles
-
-&gt; **Ciencia abierta** es la práctica de dejar "los resultados primarios de investigaciones financiados con fondos públicos, los artículos y los datos sean accesibles al público en formato digital sin restricciones o con una restricción mínima".
+#### **Ciencia abierta** práctica de dejar "los resultados primarios de investigaciones financiados con fondos públicos, los artículos y los datos sean accesibles al público en formato digital sin restricciones o con una restricción mínima".]
 
 
 .footnote[[The Turing Way Checklist](https://the-turing-way.netlify.app/reproducible-research/open/open-resources.html) / 
 [OECD (2015)]()]
 
 ---
-## Principios FAIR
-#### Ciencia tan abierta como sea posible, tan cerrado como sea necesario” (abierto por defecto)
 
-&lt;img src="imagenes/FAIRprinciples.jpg" width="700" /&gt;
+## Principios FAIR
+#### Buenas prácticas para la gestión y administración de datos científicos
+
+.pull-left[
+
+&lt;img src="imagenes/FAIRprinciples.jpg" width="700" style="display: block; margin: auto;" /&gt;
+]
+.pull-rigth[
+
+
+**"Acceso tan abierto como sea posible, tan cerrado como sea necesario" (abierto por defecto)**
+
+Se requiere claridad y transparencia en torno a las condiciones que rigen el acceso y la reutilización.
+
 ]
 
-.footnote[[Library Carpentry](https://librarycarpentry.org/lc-fair-research/01-introduction/index.html)
-]]]
+#### **F**indable | **A**ccesible | **I**nteroperable | **R**eusable
+
+.footnote[
+[Mons et al. (2017) Information Services &amp; Use 37, 49-56](https://content.iospress.com/articles/information-services-and-use/isu824)
+]
+
+---
+
+class: center, middle
+
+&lt;img src="imagenes/ReproducibleJourney.jpg" width="700" style="display: block; margin: auto;" /&gt;
+
+
+.footnote[[The Turing Way Community, &amp; Scriberia. (2020, March 3). Illustrations from the Turing Way book dashes]( http://doi.org/10.5281/zenodo.3695300)]
+---
+
+## Software y datos 
+
+#### Datos
+ Son hechos u observaciones que proporcionan **evidencia**. 
+ 
+--
+
+#### Software 
+Es el resultado de un proceso creativo que **proporciona una herramienta** para hacer algo, por ejemplo, con datos.
+
+&gt; El software es ejecutable.
+
+&gt; El software a menudo se desarrolla a partir de otro software.
+
+--
+
+.footnote[Towards FAIR principles for research software]
+
+---
+
+# **{**Definición**}**
+### Software para investigación
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+#### Es que se utiliza para generar, procesar o analizar los resultados para una **publicación** (ya sea en una revista, resumen para congreso, monografía, libro o tesis)
+#### Puede comprender desde unas **pocas líneas de código** (...), hasta un paquete de software desarrollado profesionalmente.]
+
+.footnote[[Hettrick *et al.* (2014)](https://doi.org/10.5281/zenodo.608046)]
+
+---
+
+## Los datos y el software se citan
+
+#### Autores de artículos
+* Citar datos y software que usas
+
+* Publica tu propios datos y software y citalos también
+
+--
+#### Para quienes generan datos
+* Depositalos en un repositorio "estable" 
+
+* Obtené una URLs permanente al repositorio como un `Digital Object Identifier (DOI)`
+
+* Incluí un ejemplo de cómo citarlo en el README
+
+
+.footnote[[The Turing Way Book - Credit for reproducible research](https://the-turing-way.netlify.app/reproducible-research/credit.html?highlight=cite%20data)]
+
+
+---
+## Los datos y el software se citan
+#### Para quienes desarrollan software
+
+* Deposite versiones clave de su software en un repositorio estable
+
+* Obtenga un DOI distinto para cada versión
+
+* Incluya un ejemplo de cómo citar su software en el manual o documentación
+
+
+
+.footnote[[The Turing Way - Credit for reproducible research](https://the-turing-way.netlify.app/reproducible-research/credit.html?highlight=cite%20data) / [Zenodo - DOI versioning](https://help.zenodo.org/#versioning)]
+
+---
+
+&lt;img src="imagenes/zenodo_versioning.png" width="900" style="display: block; margin: auto;" /&gt;
+.footnote[[Zenodo - Zenodo now supports DOI versioning!](https://blog.zenodo.org/2017/05/30/doi-versioning-launched/)]
 
 ---
 
@@ -137,7 +222,8 @@ class: middle, inverse
 
 
 ---
-# Reproducibilidad
+
+# Distintos tipos de reproducibilidad
 
 
 #fill: #FEFEFF
@@ -148,27 +234,27 @@ class: middle, inverse
 # direction: down | center 
 #.resaltado: fill=#8f8 title=bold
 
-[Reproducibilidad] -&gt; [ Empírica]
-[Reproducibilidad] -&gt; [ &lt;resaltado&gt; Computacional]
-[Reproducibilidad] -&gt; [ Estadística]
+[Reproducibilidad] -&gt; [Empírica]
+[Reproducibilidad] -&gt; [&lt;resaltado&gt; Computacional]
+[Reproducibilidad] -&gt; [Estadística]
 FALSETRUEFALSEFALSEFALSETRUE
 
-.footnote[Stodden et al. 2014]
+.footnote[[Stodden et al. 2014](https://www.edge.org/response-detail/25340)]
+
 ---
 
+class: center, middle, inverse
 
+### En mi computadora pude reproducir mis resultados
+### **¿puedo considerar que mi trabajo es reproducible?** 
 
-## Software y datos abiertos
+---
 
-* Los **datos** son hechos u observaciones que proporcionan **evidencia**. 
+## ¿Qué pasa de acá a 10 años?
 
-* El **software** es el resultado de un proceso creativo que **proporciona una herramienta** para hacer algo, por ejemplo, con datos.
+&lt;img src="imagenes/nature1.png" width="500" style="display: block; margin: auto;" /&gt;
 
-*-&gt;* El software es ejecutable.
-
-*-&gt;* El software a menudo se crea con otro software.
-
-.footnote[Towards FAIR principles for research software]
+.footnote[[Artículo de Nature](https://www.nature.com/articles/d41586-020-02462-7)]
 
 ---
 
@@ -178,23 +264,92 @@ class: center, middle, inverse
 
 ---
 
+## Ejemplo
 
+&lt;img src="imagenes/ErrorManagement.jpg" width="500" style="display: block; margin: auto;" /&gt;
+
+
+.footnote[[The Turing Way Community, &amp; Scriberia. (2020, March 3). Illustrations from the Turing Way book dashes]( http://doi.org/10.5281/zenodo.3695300)]
+
+---
+
+## Reproducibilidad computacional
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+
+ Cuando se proporciona información detallada sobre código, software, hardware y detalles de implementación.
+
+.tr[
+ Stodden, 2014
+]]
+
+---
+## Entorno computacional 
+
+Características de una computadora que pueden afectar el comportamiento del trabajo realizado en ella, como:
+
+* su **sistema operativo**
+
+* qué **software** tiene instalado 
+
+* las **versiones de paquetes** de software están instaladas
+
+.footnote[The Turing Way]
+
+---
+
+
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+"El software (...) con frecuencia se desarrolla para permitir el uso de otro software, lo que genera dependencias complejas, y **estos paquetes de software dependientes cambian a su vez con frecuencia**"]
+
+.footnote[Katz 2016]
 
 
 ---
 
-class: center, middle, inverse
+## Hay varias formas de capturar entornos computacionales
 
-### En mi computadora pude reproducir mis resultados
-### ¿puedo considerar que mi trabajo es reproducible? 
+
+* Sistemas de administración de paquetes (📦 `renv`)
+
+* Binder
+
+* Máquinas virtuales 
+
+* Contenedores (ejemplo: [Docker](https://colinfay.me/docker-r-reproducibility/) 🐳 )
+
+
+.footnote[[The Turing Way Book](https://www.turing.ac.uk/research/research-projects/turing-way-handbook-reproducible-data-science)]
+---
+
+# Paquete `renv`
+
+
+-  🏁 `renv::init()` Se crea una librería asociada al proyecto dentro de la carpeta `renv`.
+
+--
+
+-  📸 `renv::snapshot()` Genera el archivo `renv.lock` con información de las dependencias al momento de hacer la instantánea (snapshot).
+
+--
+
+-  🌱 `renv::restore()` reproduce el entorno!
+--
+
+
+&lt;img src="imagenes/renv.png" width="400" style="display: block; margin: auto;" /&gt;
+
+.footnote[[* Lee más sobre `renv` aquí](https://environments.rstudio.com/snapshot.html#pre-requisite-steps)]
+
 
 ---
 
-## ¿Qué pasa de acá a 10 años?
+## Binder
 
-&lt;img src="imagenes/nature1.png" width="400" style="display: block; margin: auto;" /&gt;
+[Post](https://florencia.netlify.app/es-es/2020/08/compartiendo-entornos-interactivos-y-reproducibles-en-r-con-binder.es-es/) sobre Binder en R-Ladies BA (incluye charla)
 
-.footnote[[Artículo de Nature](https://www.nature.com/articles/d41586-020-02462-7)]
+&lt;iframe src="https://flor14.github.io/r_de_reproducibilidad/r_de_reproducibilidad.html#1" width="100%" height="400px"&gt;&lt;/iframe&gt;
+
 
 ---
 
@@ -203,7 +358,6 @@ class: center, middle, inverse
 &lt;img src="imagenes/joss.png" width="700" /&gt;
 .footnote[D’Andrea (2019). Journal of Open Source Software, 4(37), 785, https://doi.org/10.21105/joss.00785]
 
-
 ---
 
 class: center, inverse, middle
@@ -211,7 +365,38 @@ class: center, inverse, middle
 
 ---
 
+### Ventajas
 
+* Fomenta las colaboraciones (**GitHub/GitLab**)
+
+* Aumenta el impacto de las publicaciones
+
+* Permite seguir la historia de tu proyecto (**git**)
+
+* Mejoras el flujo de trabajo 
+
+* Permiten escribir de forma eficiente (**RMarkdown**)
+
+
+---
+
+### Desventajas
+
+* Lleva **esfuerzo** preparar el código y las bases de datos para publicar
+
+* Faltan incentivos
+
+* Se crea una ventaja para los "competidores"
+
+---
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+####"El hecho de que un análisis sea reproducible **no garantiza su calidad**, que este sea correcto o la validez de los resultados publicados" - Peng (2011)
+
+]
+
+
+---
 
 # ¿Un cambio cultural?
 
@@ -235,7 +420,7 @@ class: center, inverse, middle
 
 ---
 
-# Reproducibilidad computacional
+# Reproducibilidad 
 
 &lt;img src="imagenes/CultureShift.jpg" width="4359" style="display: block; margin: auto 0 auto auto;" /&gt;
 .footnote[[Scriberia](https://www.nature.com/articles/d41586-020-02462-7)]
@@ -323,7 +508,7 @@ Empleo distintas bases de datos:
 
 [base de datos 1] 
 [base de datos 2] 
-[base de datos *n*] FALSETRUEFALSEFALSEFALSETRUE
+[base de datos n] FALSETRUEFALSEFALSEFALSETRUE
 
 
 
@@ -349,7 +534,7 @@ Automatización de corridas:
 
 [base de datos 1] --&gt; [&lt;high&gt;Modelo PWC]
 [base de datos 2] --&gt; [&lt;high&gt;Modelo PWC]
-[base de datos *n*] --&gt; [&lt;high&gt;Modelo PWC]FALSETRUEFALSEFALSEFALSETRUE
+[base de datos n] --&gt; [&lt;high&gt;Modelo PWC]FALSETRUEFALSEFALSEFALSETRUE
 
 ---
 
@@ -409,162 +594,6 @@ class: inverse, middle, center
 
 ---
 
-&lt;img src="imagenes/ReproducibleJourney.jpg" width="700" style="display: block; margin: auto;" /&gt;
-
-
-
-class: middle, center
-
-.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-####"El hecho de que un análisis sea reproducible **no garantiza su calidad**, que este sea correcto o la validez de los resultados publicados" - Peng (2011)
-
-]
-
-
-
-
----
-# Programación literaria
-
-### RMarkdown (.Rmd)
-
-
-
-
-
-
-
-
----
-
-
-# Reproducibilidad computacional
-
-.panelset[
-.panel[.panel-name[¿Qué es?]
-
-.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-
- Cuando se proporciona información detallada sobre código, software, hardware y detalles de implementación.
-
-.tr[
- Stodden, 2014
-]]
- 
-]
-
-.panel[.panel-name[Ejemplos]
-
-
-]
-
-.panel[.panel-name[Entornos]
-
-*  session.info()
-* "Empaquetar" los datos
-*  Paquetes de manejo de dependencias (renv)
-*  Notebooks interactivas (Binder / RStudio Cloud)
-
-Recomiendo, esta charla que dí en R-Ladies BA
-]
-]
-
-.footnote["Más información en el siguiente link"]
-
-
----
-
-class: inverse, middle, center
-
-## ¿Qué usamos para asegurar la reproducibilidad de los artículos científicos?
-
----
-
-
-.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
-"El software (...) con frecuencia se desarrolla para permitir el uso de otro software, lo que genera dependencias complejas, y estos paquetes de software dependientes cambian a su vez con frecuencia"]
-
-.footnote[Katz 2016]
-
-
----
-
-### Entorno computacional 
-
-Características de una computadora que pueden afectar el comportamiento del trabajo realizado en ella, como:
-* su **sistema operativo**
-* qué **software** tiene instalado 
-* las **versiones de paquetes** de software están instaladas
-
-.footnote[The Turing Way]
----
-
-# Algunas opciones para capturar entornos
-
-* paquete `renv`
-* Binder
-* Docker container
-
----
-
-## Más sobre entornos
-
-[Post](https://florencia.netlify.app/es-es/2020/08/compartiendo-entornos-interactivos-y-reproducibles-en-r-con-binder.es-es/) sobre Binder en R-Ladies BA (incluye charla)
-
-&lt;iframe src="https://flor14.github.io/r_de_reproducibilidad/r_de_reproducibilidad.html#1" width="100%" height="400px"&gt;&lt;/iframe&gt;
-
----
-
-
-## Mejora mi flujo de trabajo
-
-
-* Mi proyecto esta organizado
-
-* No tengo problema en compartirlo con quien quiera.
-
----
-
-## Los datos y el software se citan
-#### Autores de artículos
-* Citar datos y software que usas
-* Publica tu propios datos y software y citalos también
-* Obtené un ORCID id
-
---
-#### Para quienes generan datos
-* Depositalos en un repositorio "estable" 
-* Obtené un DOI
-* Incluí un ejemplo de cómo citarlo en el README
-
-
-.footnote[[The Turing Way - Credit for reproducible research](https://the-turing-way.netlify.app/reproducible-research/credit.html?highlight=cite%20data)]
-
-
----
-## Los datos y el software se citan
-#### Para quienes desarrollan software
-
-* Deposite versiones clave de su software en un repositorio estable
-
-* Obtenga un DOI distinto para cada versión
-
-* Incluya un ejemplo de cómo citar su software en el manual o documentación
-
-#### Ejemplo
-v1.0 (specific version): 10.5281/zenodo.60943
-v1.1 (specific version): 10.5281/zenodo.800648
-Concept (all versions): 10.5281/zenodo.705645
-
-.footnote[[The Turing Way - Credit for reproducible research](https://the-turing-way.netlify.app/reproducible-research/credit.html?highlight=cite%20data) / [Zenodo - DOI versioning](https://help.zenodo.org/#versioning)]
-
----
-
-&lt;img src="imagenes/zenodo_versioning.png" width="900" style="display: block; margin: auto;" /&gt;
-.footnote[[Zenodo - Zenodo now supports DOI versioning!](https://blog.zenodo.org/2017/05/30/doi-versioning-launched/)]
-
----
-
 class: middle, inverse
 
 ### Reproducibilidad
@@ -581,7 +610,7 @@ class: middle, inverse
 
 * **Organizar los archivos** de acuerdo a una convención prevalente.
 
-* Proveer **separación entre los datos, métodos y salidas** expresando sin ambiguedades la relación entre las tres.
+* Proveer **separación entre los datos, métodos y resultados** expresando sin ambiguedades la relación entre las tres.
 
 * Especificar el entorno (+ **reproducibilidad**).
 
@@ -591,7 +620,6 @@ class: middle, inverse
 .pull-right[
 &lt;img src="imagenes/ResearchCompendium.jpg" width="500" /&gt;
 ]
-
 
 ---
 
@@ -604,7 +632,6 @@ Otra persona pueda saber que encontrar por los nombres de los archivos y directo
 
 **Marwick(2018)** Utilizar la estructura de un paquete de R
 
-Crea el paquete `rrtools`
 ]
 
 .pull-right[
@@ -613,6 +640,8 @@ Crea el paquete `rrtools`
 
 ---
 class: middle, center, inverse
+
+
 &gt; "introducen el concepto de compendio como contenedor de los diferentes elementos que componen el documento y sus cálculos (es decir, texto, código, datos, ... ), y como medio de distribución, gestión y actualización de la colección "
 
 
@@ -621,14 +650,13 @@ class: middle, center, inverse
 ---
 
 ## Paquete `rrtools` 
-
-Tutorial 
+#### Genera compendios de investigación en R
 
 &lt;img src="imagenes/rc-logo.png" width="100" /&gt;
 
 * Archivo `README.md` que describe el proyecto
 
-*  Programación literaria (`RMarkdown`)
+* Programación literaria (`RMarkdown`)
 
 * Estructura de paquete (Archivo DESCRIPTION con las dependencias)
 
@@ -645,8 +673,6 @@ Tutorial
 .panel[.panel-name[Licencia]
 
 * **Incluir un archivo con la licencia** indica a los demás cómo puede ser reutilizado tu trabajo.
-
-* Los **datos** y las **figuras** podrian tener diferentes licencias.
 
 --
 
@@ -889,7 +915,6 @@ class: inverse
 #### Principios FAIR / Ciencia Abierta / Reproducibilidad
 * [The Turing Way book](https://the-turing-way.netlify.app/)
 
-* [Lista de recursos sobre Research compendium](https://research-compendium.science/)
 * [OECD (2015), “Making Open Science a Reality”](https://www.fct.pt/dsi/docs/Making_Open_Science_a_Reality.pdf), OECD Science, Technology and Industry Policy Papers, No. 25,
 OECD Publishing, Paris. http://dx.doi.org/10.1787/5jrs2f963zs1-en
 
@@ -913,6 +938,10 @@ class: inverse
 # Referencias
 #### Reproducibilidad computacional
 * [The Turing Way book](https://the-turing-way.netlify.app/)
+
+
+* [Lista de recursos sobre Research compendium](https://research-compendium.science/)
+
 
 * UseR 2020 
 
