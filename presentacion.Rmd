@@ -137,7 +137,7 @@ knitr::include_graphics("imagenes/ResearchCycle.jpg")
 .pull-left[
 
 ```{r research, echo = FALSE, out.width=700, fig.align='center'}
-knitr::include_graphics("imagenes/FAIRprinciples.jpg")
+knitr::include_graphics("imagenes/FAIRPrinciples.jpg")
 ```
 ]
 .pull-rigth[
@@ -152,7 +152,7 @@ Se requiere claridad y transparencia en torno a las condiciones que rigen el acc
 #### **F**indable | **A**ccesible | **I**nteroperable | **R**eusable
 
 .footnote[
-[Mons et al. (2017)](https://content.iospress.com/articles/information-services-and-use/isu824) / [Imagen: The Turing Way Community, & Scriberia. (2020). ](http://doi.org/10.5281/zenodo.3695300)
+[Mons *et al.* (2017)](https://content.iospress.com/articles/information-services-and-use/isu824) / [Imagen: The Turing Way Community, & Scriberia. (2020). ](http://doi.org/10.5281/zenodo.3695300)
 ]
 
 ---
@@ -180,7 +180,7 @@ Es el resultado de un proceso creativo que **proporciona una herramienta** para 
 
 --
 
-.footnote[[Lamprecht et al. (2020)](https://content.iospress.com/articles/data-science/ds190026)]
+.footnote[[Lamprecht *et al.* (2020)](https://content.iospress.com/articles/data-science/ds190026)]
 
 ---
 
@@ -191,7 +191,7 @@ Es el resultado de un proceso creativo que **proporciona una herramienta** para 
 #### Es que se utiliza para generar, procesar o analizar los resultados para una **publicación** (ya sea en una revista, resumen para congreso, monografía, libro o tesis)
 #### Puede comprender desde unas **pocas líneas de código** (...), hasta un paquete de software desarrollado profesionalmente.]
 
-.footnote[[Hettrick et al. (2014)](https://doi.org/10.5281/zenodo.608046)]
+.footnote[[Hettrick *et al.* (2014)](https://doi.org/10.5281/zenodo.608046)]
 
 ---
 
@@ -240,7 +240,7 @@ knitr::include_graphics("imagenes/DOI.jpg")
 
 knitr::include_graphics("imagenes/zenodo_versioning.png")
 ```
-.footnote[[Zenodo - Zenodo now supports DOI versioning!](https://blog.zenodo.org/2017/05/30/doi-versioning-launched/)]
+.footnote[[Zenodo Blog - Zenodo now supports DOI versioning!](https://blog.zenodo.org/2017/05/30/doi-versioning-launched/)]
 
 ---
 
@@ -345,7 +345,7 @@ knitr::include_graphics("imagenes/ErrorManagement.jpg")
 
 #### "El software (...) con frecuencia se desarrolla para permitir el uso de otro software, lo que genera dependencias complejas, y **estos paquetes de software dependientes cambian a su vez con frecuencia**" 
 
-.tr[Katz *et al.* (2016)
+.tr[[Katz *et al.* (2016)](https://doi.org/10.7287/peerj.preprints.2630v1)
 ]
 ]
 
