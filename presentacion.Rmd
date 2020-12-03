@@ -688,7 +688,7 @@ knitr::include_graphics("imagenes/ResearchCompendium.jpg")
 
 * **Convención**: Otra persona debería poder interpretar los nombres de los archivos y directorios. 
 
-**Marwick(2018)**  Utilizar la estructura de un paquete de R
+* **Marwick(2018)** proponetilizar la estructura de un paquete de R
 
 * **El compendio puede tener distinta complejidad**
 ]
@@ -700,7 +700,7 @@ knitr::include_graphics("imagenes/small_rc.png")
 
 ```
 ]
-.footnote[[Marwick(2018)](https://doi.org/10.1080/00031305.2017.1375986)]
+.footnote[[Marwick et al. (2018)](https://doi.org/10.1080/00031305.2017.1375986)]
 ---
 
 ## ¿Que agrego cuando agrego un compendio de investigacion?
@@ -737,7 +737,7 @@ knitr::include_graphics("imagenes/rc-logo.png")
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 El objetivo de `rrtools` es proporcionar instrucciones, plantillas y funciones para hacer un compendio básico adecuado para escribir investigaciones reproducibles con R.]
 
-.footnote[[Marwick(2018)](https://doi.org/10.1080/00031305.2017.1375986)]
+.footnote[[Marwick et al (2018)](https://doi.org/10.1080/00031305.2017.1375986)]
 ---
 
 [Tutorial de Anna Krystalli](https://annakrystalli.me/rrresearch/10_compendium.html)
@@ -860,7 +860,7 @@ knitr::include_graphics("imagenes/plotly.png")
 
 ```
 
-> "Los artículos científicos son cada vez más difíciles de leer; Si se usan adecuadamente, las figuras interactivas tienen el potencial de ayudar a contrarrestar esta tendencia. Esto es especialmente cierto para comunicar los hallazgos a los responsables políticos y al público en general en general" - [F1000 REsearch blog](https://blog.f1000.com/2017/07/19/so-long-static-we-now-support-interactive-ploty-figures-in-our-articles/)
+> "Los artículos científicos son cada vez más difíciles de leer; Si se usan adecuadamente, las figuras interactivas tienen el potencial de ayudar a contrarrestar esta tendencia. Esto es especialmente cierto para comunicar los hallazgos a los responsables políticos y al público en general en general" - [F1000 Research blog](https://blog.f1000.com/2017/07/19/so-long-static-we-now-support-interactive-ploty-figures-in-our-articles/)
 
 
 ## Artículo reproducible
