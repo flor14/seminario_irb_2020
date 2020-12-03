@@ -267,7 +267,7 @@ class: center, middle
 
 ```
 
-.footnote[[Stodden et al. (2014)](https://www.edge.org/response-detail/25340)]
+.footnote[[Stodden (2014)](https://www.edge.org/response-detail/25340)]
 
 ---
 
@@ -308,14 +308,14 @@ knitr::include_graphics("imagenes/tidyr.png")
 .footnote[Logo de `tidyr` por [RStudio](https://rstudio.com/)]
 
 ---
-
+class: middle, center
 ## Reproducibilidad computacional
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 
 #### Cuando se proporciona información detallada sobre software, hardware y detalles de implementación.
 
 .tr[
- Stodden et al (2014)
+ Stodden (2014)
 ]]
 
 
@@ -334,23 +334,20 @@ Características de una computadora que pueden afectar el comportamiento del tra
 .footnote[[The Turing Way Community (2019)](https://the-turing-way.netlify.app/)]
 
 ---
+class: middle, center
 
 ```{r error, echo = FALSE, out.width=500, fig.align='center'}
 knitr::include_graphics("imagenes/ErrorManagement.jpg")
 ```
-
+[Imagen: The Turing Way Community, & Scriberia. (2020)]( http://doi.org/10.5281/zenodo.3695300)
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 
 #### "El software (...) con frecuencia se desarrolla para permitir el uso de otro software, lo que genera dependencias complejas, y **estos paquetes de software dependientes cambian a su vez con frecuencia**" 
 
-.tr[Katz et al. (2016)]
+.tr[Katz *et al.* (2016)
 ]
-
-
-
-.footnote[[Imagen: The Turing Way Community, & Scriberia. (2020)]( http://doi.org/10.5281/zenodo.3695300)]
-
+]
 
 ---
 
@@ -366,7 +363,7 @@ knitr::include_graphics("imagenes/ErrorManagement.jpg")
 * Contenedores (ejemplo: [Docker](https://colinfay.me/docker-r-reproducibility/) 🐳 )
 
 
-.footnote[[The Turing Way Book](https://www.turing.ac.uk/research/research-projects/turing-way-handbook-reproducible-data-science)]
+.footnote[[The Turing Way Community (2019)](https://www.turing.ac.uk/research/research-projects/turing-way-handbook-reproducible-data-science)]
 ---
 
 # Paquete `renv`
@@ -453,7 +450,9 @@ class: middle, center
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 ####"El hecho de que un análisis sea reproducible **no garantiza su calidad**, que este sea correcto o la validez de los resultados publicados" 
-.tr[Peng (2011)]
+
+.tr[Peng (2011)
+]
 
 ]
 
@@ -669,7 +668,7 @@ class: middle, inverse
 
 * Especificar el entorno (+ **reproducibilidad**).
 
-.footnote[Marwick 2018]
+
 ]
 
 .pull-right[
@@ -680,6 +679,7 @@ knitr::include_graphics("imagenes/ResearchCompendium.jpg")
 ```
 ]
 
+.footnote[[Marwick *et al.* (2018)](https://doi.org/10.1080/00031305.2017.1375986)]
 ---
 
 ## Compendio de investigación
@@ -688,7 +688,7 @@ knitr::include_graphics("imagenes/ResearchCompendium.jpg")
 
 * **Convención**: Otra persona debería poder interpretar los nombres de los archivos y directorios. 
 
-* **Marwick(2018)** proponetilizar la estructura de un paquete de R
+* **Marwick *et al.* (2018)** proponen utilizar la estructura de un paquete de R
 
 * **El compendio puede tener distinta complejidad**
 ]
@@ -700,7 +700,7 @@ knitr::include_graphics("imagenes/small_rc.png")
 
 ```
 ]
-.footnote[[Marwick et al. (2018)](https://doi.org/10.1080/00031305.2017.1375986)]
+.footnote[[Marwick *et al.* (2018)](https://doi.org/10.1080/00031305.2017.1375986)]
 ---
 
 ## ¿Que agrego cuando agrego un compendio de investigacion?
@@ -737,10 +737,10 @@ knitr::include_graphics("imagenes/rc-logo.png")
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 El objetivo de `rrtools` es proporcionar instrucciones, plantillas y funciones para hacer un compendio básico adecuado para escribir investigaciones reproducibles con R.]
 
-.footnote[[Marwick et al (2018)](https://doi.org/10.1080/00031305.2017.1375986)]
+.footnote[[Marwick *et al.* (2018)](https://doi.org/10.1080/00031305.2017.1375986)]
 ---
 
-[Tutorial de Anna Krystalli](https://annakrystalli.me/rrresearch/10_compendium.html)
+[Tutorial de Anna Krystalli, mejor recurso para aprender](https://annakrystalli.me/rrresearch/10_compendium.html)
 
 ✔️ Control de versiones
 
@@ -808,8 +808,7 @@ Asignarle una URLs permanente al repositorio como un `Digital Object Identifier 
 
 ]
 
-.footnote[[Marwick(2018)](https://doi.org/10.1080/00031305.2017.1375986)]
-
+.footnote[[Marwick *et al.* (2018)](https://doi.org/10.1080/00031305.2017.1375986)]
 
 
 ---
@@ -845,7 +844,7 @@ knitr::include_graphics("imagenes/shiny.jpg")
 
 [Ejemplo de shiny app parte de una publicación - Bernabeu et al (2017)](https://mybinder.org/v2/gh/pablobernabeu/Modality-switch-effects-emerge-early-and-increase-throughout-conceptual-processing/0a5542658914a6ed01cf8e96252c48bb5bcf8f18?urlpath=shiny/Shiny-app/)
 
-.footnote[Bernabeu, P (2017). Modality switch effects emerge early and increase throughout conceptual processing: Evidence from ERPs. Cognitive Science Society.]
+Bernabeu, P (2017). Modality switch effects emerge early and increase throughout conceptual processing: Evidence from ERPs. Cognitive Science Society.
 
 #### Ejemplos de Shiny apps publicadas en repositorios
 EFSA. (2018, June 26). Shiny R tool for the automation of systematic reviews (Version v3). Zenodo. http://doi.org/10.5281/zenodo.1299654
