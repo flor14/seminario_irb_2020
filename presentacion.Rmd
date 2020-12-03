@@ -731,8 +731,8 @@ knitr::include_graphics("imagenes/small_rc.png")
 ```{r rclogo, echo = FALSE, out.width=100}
 knitr::include_graphics("imagenes/rc-logo.png")
 ```
-
 [Paquete (no esta en CRAN)](https://github.com/benmarwick/rrtools)
+
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
 El objetivo de `rrtools` es proporcionar instrucciones, plantillas y funciones para hacer un compendio básico adecuado para escribir investigaciones reproducibles con R.]
@@ -742,30 +742,26 @@ El objetivo de `rrtools` es proporcionar instrucciones, plantillas y funciones p
 
 [Tutorial de Anna Krystalli](https://annakrystalli.me/rrresearch/10_compendium.html)
 
-✔️ control de versiones
+✔️ Control de versiones
 
-➕ estructura de paquete de R
+➕ Estructura de paquete de R
 
-➕ licencia
+➕ Licencia
 
-➕ crear un README
+➕ Crear un README
 
 ➕ Agregar un DOI
 
 ➕ Agregar cómo se cita
 
-✔️Agregar una estructura de archivos `analysis/` y `data/`
+✔️ Agregar una estructura de archivos `analysis/` y `data/`
 
-✔️Generar el manuscrito con código incluido en `RMarkdown` 
+✔️ Generar el manuscrito con código incluido en `RMarkdown` 
 
-✔️️Usar la plantilla del journal con el paquete `rticles`
+✔️️ Usar la plantilla del journal con el paquete `rticles`
 
-✔️️Manejar las dependencias 
+✔️️ Manejar las dependencias 
 
-
-```{r rc2, echo = FALSE, out.width=600}
-knitr::include_graphics("imagenes/compendio2.png")
-```
 
 ---
 
@@ -831,41 +827,52 @@ class: middle, inverse
 ## Comunicación de mis resultados
 
 * Aplicación web (**shiny**)
+
 * Gráficos interactivos (**plotly**)
-* Papers interactivos y reproducibles (**stencila**)
+
+* Papers interactivos y reproducibles (**artículo ejecutable**)
 
 ---
 
 
 ## Shiny
 
-```{r hexshiny, echo = FALSE, out.width=200}
+```{r hexshiny, echo = FALSE, out.width=100}
 
 knitr::include_graphics("imagenes/shiny.jpg")
 
 ```
 
-#### Ejemplos
+[Ejemplo de shiny app parte de una publicación - Bernabeu et al (2017)](https://mybinder.org/v2/gh/pablobernabeu/Modality-switch-effects-emerge-early-and-increase-throughout-conceptual-processing/0a5542658914a6ed01cf8e96252c48bb5bcf8f18?urlpath=shiny/Shiny-app/)
+
+.footnote[Bernabeu, P (2017). Modality switch effects emerge early and increase throughout conceptual processing: Evidence from ERPs. Cognitive Science Society.]
+
+#### Ejemplos de Shiny apps publicadas en repositorios
 EFSA. (2018, June 26). Shiny R tool for the automation of systematic reviews (Version v3). Zenodo. http://doi.org/10.5281/zenodo.1299654
 
-Vasiliki Bitsouni, Samantha Lycett, Tanja Opriessnig, & Andrea Doeschl-Wilson. (2020, March 2). Vaccine Effectiveness In The Field -- An Interactive R Shiny Modelling App (Version v1.0.0). PLOS ONE. Zenodo. http://doi.org/10.5281/zenodo.3693547
 ---
 
 ## Gráficos interactivos
 
-```{r hexplotly, echo = FALSE, out.width=250}
+```{r hexplotly, echo = FALSE, out.width=100}
 
 knitr::include_graphics("imagenes/plotly.png")
 
 ```
 
+> "Los artículos científicos son cada vez más difíciles de leer; Si se usan adecuadamente, las figuras interactivas tienen el potencial de ayudar a contrarrestar esta tendencia. Esto es especialmente cierto para comunicar los hallazgos a los responsables políticos y al público en general en general" - [F1000 REsearch blog](https://blog.f1000.com/2017/07/19/so-long-static-we-now-support-interactive-ploty-figures-in-our-articles/)
+
+
 ## Artículo reproducible
 
-[ELife Sciences](https://elifesciences.org/articles/30274/executable)
+[ELife Sciences / Artículo ejecutable](https://elifesciences.org/articles/30274/executable)
 
 [stenci.la](https://stenci.la/)
 
+---
+class: inverse, middle, center
 
+### Mostrar shiny app de mi próximo artículo
 
 ---
 class: inverse, middle, center
@@ -876,48 +883,44 @@ class: inverse, middle, center
 
 # ROpenSci
 
-.pull-right[
-```{r ropen, echo = FALSE, out.width=200}
+
+```{r ropen, echo = FALSE, out.width=200, fig.align='center'}
 knitr::include_graphics("imagenes/ropensci.png")
 ```
-]
-.pull-left[
+
+
 [Web](https://ropensci.org/)
 
 [Twitter de ROpenSci](https://twitter.com/rOpenSci)
-]
+
 
 ---
 
 # The Turing Way
 
-.pull-right[
-```{r open, echo = FALSE, out.width=200, fig.align='right'}
+
+```{r open, echo = FALSE, out.width=200, fig.align='center'}
 knitr::include_graphics("imagenes/LogoDetailWithText.jpg")
 ```
-]
-.pull-left[
+
 Libro de [The Turing Way](https://the-turing-way.netlify.app/welcome)
 
 [Twitter de The Turing Way](https://twitter.com/turingway)
-]
+
 
 
 ---
 
 # ReproHack
 
-.pull-right[
-```{r rh, echo = FALSE, out.width=200, fig.align='right'}
+
+```{r rh, echo = FALSE, out.width=200, fig.align='center'}
 knitr::include_graphics("imagenes/reprohack.png")
 ```
-]
 
-.pull-left[
 
 [Twitter de ReproHack](https://twitter.com/ReproHack)
 
-]
 ---
 
 # ReproHack en [LatinR 2020](https://latin-r.com/blog/reprohack)
